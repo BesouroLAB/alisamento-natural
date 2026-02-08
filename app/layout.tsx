@@ -4,6 +4,7 @@ import "./globals.css";
 import MobileStickyFooter from "@/components/MobileStickyFooter";
 import NotificationToast from "@/components/NotificationToast";
 import AudioMiniPlayer from "@/components/AudioMiniPlayer";
+import GlobalAudioProvider from "@/components/GlobalAudioProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans bg-[var(--color-background-light)] text-gray-900 antialiased min-h-screen pb-24`}
       >
+        <GlobalAudioProvider />
         {children}
         <AudioMiniPlayer />
         <NotificationToast />

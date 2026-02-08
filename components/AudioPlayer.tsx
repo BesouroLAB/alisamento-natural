@@ -1,44 +1,19 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Play, Pause, Headphones, ChevronDown, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useAudioStore } from "@/hooks/useAudioStore";
 
-interface AudioPlayerProps {
-    audioSrc?: string;
-}
-
-export default function AudioPlayer({ audioSrc = "https://res.cloudinary.com/do8gdtozt/video/upload/v1770517153/Por_que_maizena_n%C3%A3o_alisa_o_cabelo_e18u55.mp4" }: AudioPlayerProps) {
-    const { isPlaying, setIsPlaying, setAudioData } = useAudioStore();
+/**
+ * Player de áudio visual. O elemento <audio> real está no GlobalAudioProvider.
+ * Isso permite que o áudio persista entre navegações de página.
+ */
+export default function AudioPlayer() {
+    const { isPlaying, setIsPlaying } = useAudioStore();
     const [showNotes, setShowNotes] = useState(false);
-    const audioRef = useRef<HTMLAudioElement>(null);
-
-    useEffect(() => {
-        if (!audioRef.current) return;
-        if (isPlaying) {
-            audioRef.current.play().catch(() => setIsPlaying(false));
-        } else {
-            audioRef.current.pause();
-        }
-    }, [isPlaying, setIsPlaying]);
 
     const togglePlay = () => {
         setIsPlaying(!isPlaying);
-    };
-
-    const handleTimeUpdate = () => {
-        if (audioRef.current) {
-            setAudioData({
-                currentTime: audioRef.current.currentTime,
-                duration: audioRef.current.duration
-            });
-        }
-    };
-
-    const handleLoadedMetadata = () => {
-        if (audioRef.current) {
-            setAudioData({ duration: audioRef.current.duration });
-        }
     };
 
     const audioSchema = {
@@ -61,14 +36,6 @@ export default function AudioPlayer({ audioSrc = "https://res.cloudinary.com/do8
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(audioSchema) }}
-            />
-
-            <audio
-                ref={audioRef}
-                src={audioSrc}
-                onEnded={() => setIsPlaying(false)}
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedMetadata={handleLoadedMetadata}
             />
 
             {/* Player Principal */}
