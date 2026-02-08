@@ -60,9 +60,6 @@ export default function Home() {
               unoptimized
               sizes="(max-width: 768px) 100vw, 672px"
             />
-            <div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md text-[10px] text-white font-bold">
-              RESULTADO REAL EM 15 MINUTOS
-            </div>
           </div>
 
           {/* Corpo do Texto Editorial (Poderosa Copy Advertorial) */}
