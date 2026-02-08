@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="700" cy="50" r="100" fill="#f97316" opacity="0.1"/>
+  <circle cx="100" cy="400" r="80" fill="#6366f1" opacity="0.1"/>
+  
+  <!-- Trophy Icon -->
+  <g transform="translate(320, 80)">
+    <!-- Trophy cup -->
+    <path d="M80 40 L80 80 Q80 120 120 140 L120 160 L40 160 L40 140 Q0 120 0 80 L0 40 Z" fill="url(#goldGrad)"/>
+    <!-- Trophy handles -->
+    <path d="M0 50 Q-30 50 -30 80 Q-30 110 0 110" fill="none" stroke="#fbbf24" stroke-width="8"/>
+    <path d="M80 50 Q110 50 110 80 Q110 110 80 110" fill="none" stroke="#fbbf24" stroke-width="8"/>
+    <!-- Trophy base -->
+    <rect x="20" y="160" width="80" height="10" fill="#f59e0b"/>
+    <rect x="10" y="170" width="100" height="15" rx="3" fill="#d97706"/>
+    <!-- Star on trophy -->
+    <polygon points="60,60 67,75 84,78 72,90 75,107 60,99 45,107 48,90 36,78 53,75" fill="white"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="280" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="white">
+    TOP 10 MELHORES
+  </text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#f97316">
+    PROGRESSIVAS DE CHUVEIRO
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">
+    La Bella Liss • Super Poderes • Hidraliso • Knut
+  </text>
+  
+  <!-- Badge -->
+  <g transform="translate(680, 30)">
+    <rect x="0" y="0" width="100" height="40" rx="20" fill="#f97316"/>
+    <text x="50" y="27" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" fill="white">2026</text>
+  </g>
+</svg>

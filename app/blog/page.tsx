@@ -82,16 +82,16 @@ export default function BlogPage() {
                 </div>
 
                 {/* CTA Contextual */}
-                <div className="mt-12 p-6 bg-gray-900 rounded-2xl text-center text-white">
-                    <h3 className="text-lg font-bold mb-2">Cansada de receitas que não funcionam?</h3>
-                    <p className="text-sm text-gray-300 mb-4">
+                <div className="mt-12 p-6 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-2xl border border-indigo-500/30 text-center text-white shadow-xl">
+                    <p className="font-bold text-orange-400 mb-3 text-lg">🔬 Cansada de receitas que não funcionam?</p>
+                    <p className="text-sm text-gray-300 mb-6">
                         Veja a tecnologia que está revolucionando o alisamento em casa.
                     </p>
                     <Link
-                        href="/"
-                        className="inline-block bg-green-500 hover:bg-green-600 text-white font-black py-3 px-8 rounded-xl transition"
+                        href="/blog/hidraliso-funciona-resenha"
+                        className="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-8 rounded-xl transition-all hover:scale-[1.02] shadow-lg uppercase tracking-wide"
                     >
-                        Conhecer o Hidraliso ➔
+                        👉 VER RESENHA DO HIDRALISO
                     </Link>
                 </div>
             </main>

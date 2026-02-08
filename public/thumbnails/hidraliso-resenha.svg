@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="650" cy="100" r="120" fill="#f97316" opacity="0.08"/>
+  <circle cx="150" cy="380" r="100" fill="#6366f1" opacity="0.08"/>
+  
+  <!-- Product bottle illustration -->
+  <g transform="translate(300, 60)">
+    <!-- Bottle body -->
+    <rect x="60" y="40" width="80" height="140" rx="10" fill="url(#orangeGrad)" opacity="0.9"/>
+    <rect x="70" y="30" width="60" height="20" rx="5" fill="#ea580c"/>
+    <!-- Bottle cap -->
+    <rect x="75" y="10" width="50" height="25" rx="5" fill="#334155"/>
+    <!-- Label -->
+    <rect x="70" y="60" width="60" height="80" rx="5" fill="white" opacity="0.95"/>
+    <text x="100" y="95" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" fill="#ea580c">HIDRALISO</text>
+    <text x="100" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#64748b">ALISANTE DE</text>
+    <text x="100" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#64748b">CHUVEIRO</text>
+    <!-- Shine effect -->
+    <rect x="65" y="50" width="15" height="100" fill="white" opacity="0.15" rx="5"/>
+  </g>
+  
+  <!-- Checkmark badge -->
+  <g transform="translate(450, 80)">
+    <circle cx="30" cy="30" r="30" fill="#22c55e"/>
+    <path d="M18 30 L26 38 L42 22" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="270" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="white">
+    HIDRALISO FUNCIONA?
+  </text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" fill="#f97316">
+    RESENHA COMPLETA
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">
+    Testamos o Alisante de Chuveiro • Veja o Resultado Real
+  </text>
+  
+  <!-- Badge -->
+  <g transform="translate(650, 30)">
+    <rect x="0" y="0" width="120" height="40" rx="20" fill="#22c55e"/>
+    <text x="60" y="27" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="12" font-weight="900" fill="white">✓ APROVADO</text>
+  </g>
+  
+  <!-- Stars -->
+  <g transform="translate(300, 390)">
+    <text x="0" y="0" font-size="24" fill="#fbbf24">★★★★★</text>
+    <text x="135" y="0" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">(4.9/5)</text>
+  </g>
+</svg>

@@ -2,31 +2,47 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 
-// DADOS ESTRATÉGICOS (Baseados na Análise de Mercado e Busca por Voz)
+// DADOS ESTRATÉGICOS - FAQ OTIMIZADA NEURONWRITER (10 PERGUNTAS)
 const faqData = [
     {
-        question: "Grávida ou lactante pode usar a Progressiva de Chuveiro?",
-        answer: "O Hidraliso não contém formol, sendo desenvolvido com tecnologia de ácidos frutais de baixo peso molecular, o que o torna muito mais seguro. No entanto, por protocolo médico padrão, recomendamos que gestantes e lactantes apresentem a composição (disponível no site) ao seu médico antes do uso."
+        question: "O Hidraliso tem formol? Vai arder meus olhos?",
+        answer: "Não. O grande diferencial desta progressiva de chuveiro é ser 100% livre de formol. Sua base alisante utiliza um blend de ácidos frutais e tecnologia Pro Liss. Por isso, não libera vapores tóxicos, não causa ardência nos olhos e nem irritação na garganta durante a aplicação."
     },
     {
-        question: "É compatível com outras químicas (Guanidina, Henê, Luzes)?",
-        answer: "Sim! A tecnologia Pro Liss é compatível com todas as químicas, incluindo Henê, Guanidina e Tioglicolato. O segredo é sempre realizar o 'Teste de Mecha' antes da aplicação total para verificar a saúde do seu fio."
+        question: "Gestantes e lactantes podem usar?",
+        answer: "Segundo o fabricante, a fórmula é suave e não possui contraindicações graves. No entanto, por se tratar de um período delicado, a recomendação padrão de segurança é: sempre leve a composição do produto para o seu médico obstetra avaliar antes de usar qualquer cosmético de transformação."
     },
     {
-        question: "Funciona em cabelo crespo ou muito cacheado (Tipo 4)?",
-        answer: "Sim. Diferente de receitas caseiras que apenas hidratam, o Hidraliso penetra no córtex capilar. Para cabelos crespos, recomenda-se deixar o produto agir pelo tempo máximo indicado (20 a 30 minutos) e caprichar na ativação com secador para o efeito liso absoluto."
+        question: "Meu cabelo é loiro ou descolorido. Vai amarelar?",
+        answer: "Não. O Hidraliso possui componentes matizadores em sua fórmula (muitas usuárias relatam que o produto tem uma cor levemente violeta/azulada). Isso evita o desbotamento e o amarelamento comum em progressivas ácidas, ajudando a manter os fios loiros com cor viva e brilho."
+    },
+    {
+        question: "Tenho cabelo crespo ou muito volumoso. Funciona para mim?",
+        answer: "Sim. A tecnologia de baixo peso molecular foi desenvolvida para penetrar até nos fios mais resistentes (Curvaturas 4A, 4B e 4C). Em cabelos muito crespos, o resultado da primeira aplicação costuma ser uma redução drástica de volume e abertura de cachos. Para um efeito 'liso escorrido', pode ser necessária uma segunda aplicação (respeitando o intervalo) e finalização com chapinha."
+    },
+    {
+        question: "O produto é compatível com outras químicas (Henê, Guanidina, Tioglicolato)?",
+        answer: "O Hidraliso é compatível com a grande maioria das químicas, incluindo Henê e colorações, pois age por pH e não por quebra de pontes de enxofre agressiva. Porém, a regra de ouro dos cabeleireiros vale aqui: faça sempre o Teste de Mecha antes de aplicar na cabeça toda para verificar a resistência do seu fio."
     },
     {
         question: "Quanto tempo dura o efeito liso?",
-        answer: "O efeito é progressivo e dura, em média, de 30 a 90 dias. Diferente da chapinha que sai na água, o Hidraliso possui 'efeito memória': quanto mais você usa, mais liso o cabelo fica a longo prazo."
+        answer: "A durabilidade média é de 30 a 90 dias. Isso varia de acordo com o crescimento da sua raiz e a frequência de lavagens. O produto não sai 'de uma vez', ele vai saindo gradualmente, o que evita aquele efeito marcado de raiz alta e ponta esticada."
     },
     {
-        question: "O produto estraga o cabelo ou afina as pontas?",
-        answer: "Não. O que estraga o cabelo é o formol (que cria uma capa plástica e impede a nutrição). O Hidraliso utiliza base condicionante que hidrata enquanto alisa, evitando o aspecto 'espigado' nas pontas."
+        question: "De quanto em quanto tempo posso retocar?",
+        answer: "Você pode reaplicar o produto assim que sentir necessidade (geralmente quando a raiz cresce, cerca de 30 dias). Como ele também atua como um hidratante potente, não há risco de 'corte químico' por acumulação, desde que o cabelo esteja saudável."
     },
     {
-        question: "Preciso saber escovar o cabelo profissionalmente?",
-        answer: "Não. O produto é termoativado, o que significa que ele precisa de calor para fixar a forma. Você só precisa secar o cabelo com o secador (basta o ar quente) para ativar o brilho espelhado. Não é necessário técnica de salão."
+        question: "Preciso mesmo usar secador e chapinha?",
+        answer: "Sim, o uso de fontes de calor é obrigatório para a ativação. O produto é termoativado. Se você apenas passar e deixar secar naturalmente, ele vai funcionar como um redutor de volume e anti-frizz, mas não vai alisar a estrutura. Para o liso perfeito, o calor é o catalisador da reação."
+    },
+    {
+        question: "Onde comprar o Hidraliso Original?",
+        answer: "Cuidado com golpes! Devido ao sucesso, existem falsificações sendo vendidas no Mercado Livre, Shopee e Americanas (muitas vezes com formol escondido). O produto original, com segurança e garantia, é vendido exclusivamente através do Site Oficial do Fabricante (link no final desta página)."
+    },
+    {
+        question: "E se eu não gostar do resultado?",
+        answer: "O fabricante oferece uma Garantia Blindada de 30 Dias. Se você usar e achar que seu cabelo não alisou, não brilhou ou não teve o resultado esperado, basta entrar em contato com o suporte deles e pedir o reembolso de 100% do valor pago. O risco é zero."
     }
 ];
 
@@ -63,8 +79,12 @@ export default function FAQAccordion() {
                 <div className="bg-indigo-100 p-2 rounded-full text-indigo-600">
                     <HelpCircle size={24} />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Dúvidas Frequentes</h2>
+                <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Perguntas Frequentes (FAQ): Tire suas dúvidas sobre o Alisamento Natural</h2>
             </div>
+
+            <p className="text-gray-600 text-sm mb-6">
+                Separamos as 10 perguntas mais comuns enviadas por nossas leitoras e respondidas com base na bula oficial e na nossa análise de mercado.
+            </p>
 
             <div className="space-y-3">
                 {faqData.map((item, index) => (
@@ -96,6 +116,21 @@ export default function FAQAccordion() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            {/* CTA FINAL */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-indigo-50 to-orange-50 rounded-2xl border border-indigo-100 text-center">
+                <p className="text-gray-700 font-medium mb-4">
+                    Quer testar o alisamento natural sem riscos? Aproveite o lote promocional com entrega rápida para todo o Brasil.
+                </p>
+                <a
+                    href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl transition transform hover:scale-[1.02] shadow-lg"
+                >
+                    👉 CLIQUE AQUI PARA ACESSAR O SITE OFICIAL
+                </a>
             </div>
 
             <p className="text-center text-xs text-gray-400 mt-6">
