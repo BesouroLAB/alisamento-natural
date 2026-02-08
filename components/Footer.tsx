@@ -24,6 +24,7 @@ export default function Footer() {
                             <li><Link href="/blog" className="hover:text-orange-600 transition">Blog</Link></li>
                             <li><Link href="/dicas" className="hover:text-orange-600 transition">Dicas de Especialista</Link></li>
                             <li><Link href="/sobre" className="hover:text-orange-600 transition">Sobre Nós</Link></li>
+                            <li><Link href="/sitemap.xml" className="hover:text-orange-600 transition" prefetch={false}>Mapa do Site</Link></li>
                         </ul>
                     </div>
 

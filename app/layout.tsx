@@ -17,6 +17,9 @@ const inter = Inter({
 // ================================================================================
 export const metadata: Metadata = {
   metadataBase: new URL("https://alisamentonatural.com.br"),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: "Melhor Progressiva de Chuveiro 2026: Análise Hidraliso vs La Bella Liss",
     template: "%s | Alisamento Natural",
@@ -69,9 +72,6 @@ export const metadata: Metadata = {
     title: "Alisamento Natural Sem Formol [2026]",
     description: "Tecnologia de alisamento sem formol. Resultado em 20 min, sem salão.",
     images: ["https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg"],
-  },
-  alternates: {
-    canonical: "https://alisamentonatural.com.br",
   },
   robots: {
     index: true,
