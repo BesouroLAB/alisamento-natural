@@ -8,7 +8,7 @@ interface AudioPlayerProps {
     audioSrc?: string;
 }
 
-export default function AudioPlayer({ audioSrc = "/audio-episodio-01.mp3" }: AudioPlayerProps) {
+export default function AudioPlayer({ audioSrc = "https://res.cloudinary.com/do8gdtozt/video/upload/v1770517153/Por_que_maizena_n%C3%A3o_alisa_o_cabelo_e18u55.mp4" }: AudioPlayerProps) {
     const { isPlaying, setIsPlaying, setAudioData } = useAudioStore();
     const [showNotes, setShowNotes] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -44,7 +44,7 @@ export default function AudioPlayer({ audioSrc = "/audio-episodio-01.mp3" }: Aud
     const audioSchema = {
         "@context": "https://schema.org",
         "@type": "AudioObject",
-        "contentUrl": "https://alisamentonatural.com.br/audio/episodio-01-maizena.mp3",
+        "contentUrl": "https://res.cloudinary.com/do8gdtozt/video/upload/v1770517153/Por_que_maizena_n%C3%A3o_alisa_o_cabelo_e18u55.mp4",
         "description": "Análise técnica: Por que a Maizena falha em alisar e como a tecnologia de baixo peso molecular realinha o fio definitivamente.",
         "duration": "PT5M30S",
         "encodingFormat": "audio/mpeg",
@@ -53,10 +53,10 @@ export default function AudioPlayer({ audioSrc = "/audio-episodio-01.mp3" }: Aud
     };
 
     return (
-        <div className="relative bg-gradient-to-br from-pink-600 via-pink-500 to-rose-400 rounded-2xl p-5 mb-8 shadow-xl overflow-hidden">
+        <div className="relative bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-800 rounded-2xl p-5 mb-8 shadow-xl overflow-hidden border border-indigo-500/20 text-indigo-50">
             {/* Efeito de luz decorativo */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-pink-300/30 rounded-full blur-2xl" />
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl" />
 
             <script
                 type="application/ld+json"
@@ -76,7 +76,7 @@ export default function AudioPlayer({ audioSrc = "/audio-episodio-01.mp3" }: Aud
                 {/* Botão de Play Grande e Chamativo */}
                 <button
                     onClick={togglePlay}
-                    className="relative flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center text-pink-600 shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:scale-110 transition-transform group"
+                    className="relative flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center text-indigo-900 shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:scale-110 transition-transform group"
                     aria-label={isPlaying ? "Pausar" : "Reproduzir"}
                 >
                     {!isPlaying && (
