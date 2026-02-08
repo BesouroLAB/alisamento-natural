@@ -179,7 +179,6 @@ export default function Home() {
               fill
               className="object-cover"
               priority
-              unoptimized
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
@@ -267,15 +266,13 @@ export default function Home() {
                   })
                 }}
               />
-              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white relative aspect-[4/5] w-full">
+                <Image
                   src="https://res.cloudinary.com/do8gdtozt/image/upload/v1770514316/ciencia-do-alisamento-capilar-infografico-entenda_bijphr.png"
                   alt="Infográfico: A Ciência do Alisamento Capilar - Tecnologia de Baixo Peso Molecular vs Maizena"
-                  className="w-full h-auto"
-                  loading="lazy"
-                  width={800}
-                  height={600}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 672px"
                 />
               </div>
             </figure>
