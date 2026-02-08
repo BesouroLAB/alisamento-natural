@@ -10,113 +10,117 @@ import InlineCTA from "@/components/InlineCTA";
 // ================================================================================
 // 🔧 SCHEMAS JSON-LD: Product + AggregateRating para Rich Snippets na Home
 // ================================================================================
-const productSchema = {
+// ================================================================================
+// 🔧 SCHEMAS JSON-LD: Graph Unificado (Product + WebPage + ImageObject)
+// ================================================================================
+const graphSchema = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Hidraliso Alisante de Chuveiro",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
-    "license": "https://alisamentonatural.com.br/termos",
-    "acquireLicensePage": "https://alisamentonatural.com.br/termos",
-    "creditText": "Hidraliso Oficial",
-    "creator": {
-      "@type": "Organization",
-      "name": "Hidraliso"
+  "@graph": [
+    {
+      "@type": "ImageObject",
+      "@id": "https://alisamentonatural.com.br/#primaryimage",
+      "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
+      "contentUrl": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
+      "width": 1280,
+      "height": 720,
+      "caption": "Hidraliso: Como funciona o alisamento de chuveiro sem formol",
+      "license": "https://alisamentonatural.com.br/termos",
+      "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+      "creditText": "Hidraliso Oficial",
+      "creator": {
+        "@type": "Organization",
+        "name": "Hidraliso"
+      },
+      "copyrightNotice": "Alisamento Natural - Imagem sob licença editorial"
     },
-    "copyrightNotice": "Alisamento Natural - Imagem sob licença editorial"
-  },
-  "description": "Progressiva de chuveiro sem formol com tecnologia termoativada. Alisa cabelos ondulados, cacheados e crespos em casa.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Hidraliso"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "2480",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891",
-    "priceCurrency": "BRL",
-    "price": "147.00",
-    "priceValidUntil": "2026-12-31",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "BRL"
+    {
+      "@type": "WebPage",
+      "@id": "https://alisamentonatural.com.br/#webpage",
+      "url": "https://alisamentonatural.com.br",
+      "name": "Melhor Progressiva de Chuveiro 2026: Análise Hidraliso vs La Bella Liss",
+      "description": "Descubra qual a melhor progressiva de chuveiro para cabelo crespo e liso. Investigamos a Tecnologia Liss que Superou La Bella e Zero Absoluto.",
+      "primaryImageOfPage": {
+        "@id": "https://alisamentonatural.com.br/#primaryimage"
       },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "BR"
+      "isPartOf": {
+        "@id": "https://alisamentonatural.com.br/#website"
       },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 0,
-          "maxValue": 1,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 3,
-          "maxValue": 7,
-          "unitCode": "DAY"
-        }
+      "about": {
+        "@id": "https://alisamentonatural.com.br/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "article p:first-of-type"]
+      },
+      "mainEntity": {
+        "@id": "https://alisamentonatural.com.br/#product"
       }
     },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "BR",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 30,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
+    {
+      "@type": "Product",
+      "@id": "https://alisamentonatural.com.br/#product",
+      "name": "Hidraliso Alisante de Chuveiro",
+      "image": {
+        "@id": "https://alisamentonatural.com.br/#primaryimage"
+      },
+      "description": "Progressiva de chuveiro sem formol com tecnologia termoativada. Alisa cabelos ondulados, cacheados e crespos em casa.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Hidraliso"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "2480",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891",
+        "priceCurrency": "BRL",
+        "price": "147.00",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "BRL"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "BR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      }
     }
-  }
-};
-
-// SpeakableSpecification para assistentes de voz (AEO)
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://alisamentonatural.com.br/#webpage",
-  "url": "https://alisamentonatural.com.br",
-  "name": "Melhor Progressiva de Chuveiro 2026: Análise Hidraliso vs La Bella Liss",
-  "description": "Descubra qual a melhor progressiva de chuveiro para cabelo crespo e liso. Investigamos a Tecnologia Liss que Superou La Bella e Zero Absoluto.",
-  "isPartOf": {
-    "@id": "https://alisamentonatural.com.br/#website"
-  },
-  "about": {
-    "@id": "https://alisamentonatural.com.br/#organization"
-  },
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["h1", "article p:first-of-type"]
-  },
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
-    "license": "https://alisamentonatural.com.br/termos",
-    "acquireLicensePage": "https://alisamentonatural.com.br/termos",
-    "creditText": "Hidraliso Oficial",
-    "creator": {
-      "@type": "Organization",
-      "name": "Hidraliso"
-    },
-    "copyrightNotice": "Alisamento Natural - Imagem sob licença editorial"
-  },
-  "mainEntity": {
-    "@id": "https://alisamentonatural.com.br/#product"
-  }
+  ]
 };
 
 export default function Home() {
@@ -125,11 +129,7 @@ export default function Home() {
       {/* ================== SCHEMAS JSON-LD ================== */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
       />
 
       {/* 1. Header Portal de Notícia */}
