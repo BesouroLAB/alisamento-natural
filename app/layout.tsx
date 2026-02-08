@@ -11,25 +11,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alisamento Natural | A Verdade Sobre o Liso Sem Formol",
+  title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2024]",
   description:
-    "Descubra por que receitas caseiras não funcionam e qual a nova tecnologia que as famosas estão usando para ter cabelo liso e saudável sem formol.",
+    "Descubra a tecnologia de alisamento sem formol usada por +50.000 brasileiras. Hidraliso: resultado em 20 minutos, sem salão. ✓ Seguro ✓ Sem Cheiro ✓ Garantia 30 dias.",
   keywords: [
     "alisamento natural",
     "alisamento sem formol",
     "hidraliso",
+    "hidraliso funciona",
+    "progressiva de chuveiro",
     "liso de chuveiro",
     "cabelo liso natural",
+    "alisamento caseiro",
   ],
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Alisamento Natural | A Verdade Sobre o Liso Sem Formol",
+    title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2024]",
     description:
-      "Descubra por que receitas caseiras não funcionam e qual a nova tecnologia que as famosas estão usando.",
-    type: "article",
+      "Tecnologia de alisamento sem formol usada por +50.000 brasileiras. Resultado em 20 min, sem salão.",
+    type: "website",
     locale: "pt_BR",
+    siteName: "AlisamentoNatural.com.br",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alisamento Natural Sem Formol [2024]",
+    description: "Tecnologia de alisamento sem formol. Resultado em 20 min, sem salão.",
+  },
+  alternates: {
+    canonical: "https://alisamentonatural.com.br",
   },
 };
 

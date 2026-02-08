@@ -24,7 +24,7 @@ export const posts: Post[] = [
     author: "Redação AlisamentoNatural",
     category: "Mitos Caseiros",
     readingTime: "4 min",
-    thumbnail: "/thumbnails/maizena-vs-tecnologia.webp",
+    thumbnail: "/thumbnails/maizena.svg",
     content: `
       <p>Você provavelmente já viu o vídeo: uma mistura mágica de amido de milho, leite e açúcar que promete deixar o cabelo liso escorrido. A promessa é tentadora, especialmente para quem quer fugir da química do salão. Mas, cientificamente falando, o que acontece com o seu fio quando você passa mingau nele?</p>
 
@@ -36,15 +36,15 @@ export const posts: Post[] = [
       <h2>O Perigo Oculto</h2>
       <p>Dermatologistas alertam: deixar resíduos de alimentos no couro cabeludo pode proliferar fungos e causar caspa. <strong>O barato pode sair caro.</strong></p>
 
-      <div class="my-8 p-6 bg-gradient-to-r from-pink-50 to-green-50 rounded-2xl border border-pink-100">
-        <h3 class="text-pink-700 font-bold text-lg mb-3">A Solução: Tecnologia de Baixo Peso Molecular</h3>
+      <div class="my-8 p-6 bg-gradient-to-r from-indigo-50 to-orange-50 rounded-2xl border border-indigo-100">
+        <h3 class="text-indigo-900 font-bold text-lg mb-3">A Solução: Tecnologia de Baixo Peso Molecular</h3>
         <p class="text-gray-700 mb-4 text-sm">Se a Maizena é grande demais para entrar no fio, a solução está na nanotecnologia. O mercado de cosméticos desenvolveu o <strong>Hidraliso</strong>, uma "Progressiva de Chuveiro" baseada em ácidos frutais hidrolisados. Diferente da receita caseira, esses ativos possuem baixo peso molecular. Eles são microscópicos o suficiente para atravessar a cutícula sem danificá-la, agindo onde realmente importa.</p>
         <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black py-3 px-6 rounded-full hover:scale-105 transition-transform shadow-lg text-center">
           🛒 VERIFICAR A TECNOLOGIA PRO LISS COM DESCONTO ➔
         </a>
       </div>
 
-      <blockquote class="border-l-4 border-pink-500 bg-gray-50 p-4 rounded-r-lg my-8 italic">
+      <blockquote class="border-l-4 border-indigo-900 bg-gray-50 p-4 rounded-r-lg my-8 italic">
         "Enquanto a receita caseira cria uma capa de açúcar por fora, a tecnologia Pro Liss realinha a estrutura por dentro. É a diferença entre pintar uma parede rachada e consertar a rachadura."
         <span class="block mt-2 text-xs font-bold not-italic">— Nota da Redação</span>
       </blockquote>
@@ -68,7 +68,7 @@ export const posts: Post[] = [
     author: "Redação AlisamentoNatural",
     category: "Comparativos",
     readingTime: "6 min",
-    thumbnail: "/thumbnails/batalha-hidraliso-fashiongold.webp",
+    thumbnail: "/thumbnails/comparativo.svg",
     content: `
       <p>Quando o assunto é alisamento sem formol, dois nomes dominam as conversas nos grupos de beleza: a luxuosa <strong>Fashion Gold</strong> e o viral <strong>Hidraliso</strong>. Ambas prometem o liso espelhado sem ardência, mas qual delas entrega o melhor custo-benefício para a realidade da mulher brasileira?</p>
       
@@ -118,7 +118,7 @@ export const posts: Post[] = [
     author: "Redação AlisamentoNatural",
     category: "Saúde Capilar",
     readingTime: "5 min",
-    thumbnail: "/thumbnails/guia-seguranca-cabelo.webp",
+    thumbnail: "/thumbnails/seguranca.svg",
     content: `
       <p>A maior barreira para quem quer alisar o cabelo não é o preço, é o <strong>medo</strong>. Medo do corte químico, medo de afinar as pontas e, principalmente, medo de prejudicar a saúde. Recebemos diariamente perguntas como: "Estou gestante, posso usar?" ou "Uso Guanidina, meu cabelo vai cair?".</p>
       

@@ -19,14 +19,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const post = getPostBySlug(slug);
     if (!post) return {};
 
+    // Mapear slugs para títulos SEO otimizados
+    const seoTitles: Record<string, string> = {
+        "alisamento-com-maizena-funciona": "Alisamento com Maizena Funciona? A Verdade Científica [2024]",
+        "fashion-gold-ou-hidraliso-qual-melhor": "Fashion Gold ou Hidraliso: Qual é Melhor? Testamos as Duas [2024]",
+        "gravida-pode-usar-progressiva-de-chuveiro": "Grávida Pode Usar Progressiva de Chuveiro? Guia de Segurança [2024]",
+    };
+
+    const optimizedTitle = seoTitles[slug] || `${post.title} | Alisamento Natural`;
+
     return {
-        title: `${post.title} | Alisamento Natural`,
+        title: optimizedTitle,
         description: post.description,
+        keywords: ["alisamento natural", "hidraliso", "progressiva de chuveiro", post.category.toLowerCase()],
         openGraph: {
-            title: post.title,
+            title: optimizedTitle,
             description: post.description,
             type: "article",
             images: [post.thumbnail],
+            siteName: "AlisamentoNatural.com.br",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: optimizedTitle,
+            description: post.description,
+        },
+        alternates: {
+            canonical: `https://alisamentonatural.com.br/blog/${slug}`,
         },
     };
 }
