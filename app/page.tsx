@@ -102,6 +102,18 @@ const webPageSchema = {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", "article p:first-of-type"]
   },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
+    "license": "https://alisamentonatural.com.br/termos",
+    "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+    "creditText": "Hidraliso Oficial",
+    "creator": {
+      "@type": "Organization",
+      "name": "Hidraliso"
+    },
+    "copyrightNotice": "Alisamento Natural - Imagem sob licença editorial"
+  },
   "mainEntity": {
     "@id": "https://alisamentonatural.com.br/#product"
   }
