@@ -108,6 +108,11 @@ const organizationSchema = {
     "height": 512,
     "license": "https://alisamentonatural.com.br/termos",
     "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+    "creditText": "Alisamento Natural",
+    "creator": {
+      "@type": "Organization",
+      "name": "Alisamento Natural"
+    },
     "copyrightNotice": "Alisamento Natural - Todos os direitos reservados"
   },
   sameAs: [

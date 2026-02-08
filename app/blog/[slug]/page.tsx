@@ -137,6 +137,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             "height": 630,
             "license": "https://alisamentonatural.com.br/termos",
             "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+            "creditText": "Alisamento Natural",
+            "creator": {
+                "@type": "Organization",
+                "name": "Alisamento Natural"
+            },
             "copyrightNotice": "Alisamento Natural - Conteúdo Editorial"
         },
         "author": {
@@ -185,6 +190,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
             "license": "https://alisamentonatural.com.br/termos",
             "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+            "creditText": "Hidraliso Oficial",
+            "creator": {
+                "@type": "Organization",
+                "name": "Hidraliso"
+            },
             "copyrightNotice": "Alisamento Natural - Imagem do Produto"
         },
         "description": "Progressiva de chuveiro sem formol com tecnologia termoativada. Alisa cabelos ondulados, cacheados e crespos em casa.",
