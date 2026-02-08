@@ -130,7 +130,7 @@ export default function Home() {
                       "@type": "Organization",
                       "name": "AlisamentoNatural"
                     },
-                    "datePublished": "2024-05-23",
+                    "datePublished": "2026-02-07",
                     "keywords": ["alisamento capilar", "hidraliso", "infográfico", "ciência capilar", "nanopartículas"]
                   })
                 }}
@@ -312,7 +312,7 @@ export default function Home() {
             </Link>
             <Link href="/blog/fashion-gold-ou-hidraliso-qual-melhor" className="group block p-5 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition border border-gray-100 shadow-sm">
               <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">Fashion Gold ou Hidraliso: Qual a melhor?</p>
-              <p className="text-xs text-gray-500 mt-2">Nossa análise editorial completa sobre as líderes do mercado em 2024.</p>
+              <p className="text-xs text-gray-500 mt-2">Nossa análise editorial completa sobre as líderes do mercado em 2026.</p>
             </Link>
             <Link href="/blog/gravida-pode-usar-progressiva-de-chuveiro" className="group block p-5 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition border border-gray-100 shadow-sm">
               <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">Grávida pode usar Progressiva de Chuveiro?</p>

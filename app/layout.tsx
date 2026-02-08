@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2024]",
+  title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2026]",
   description:
     "Descubra a tecnologia de alisamento sem formol usada por +50.000 brasileiras. Hidraliso: resultado em 20 minutos, sem salão. ✓ Seguro ✓ Sem Cheiro ✓ Garantia 30 dias.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2024]",
+    title: "Alisamento Natural Sem Formol: A Ciência do Liso de Chuveiro [2026]",
     description:
       "Tecnologia de alisamento sem formol usada por +50.000 brasileiras. Resultado em 20 min, sem salão.",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alisamento Natural Sem Formol [2024]",
+    title: "Alisamento Natural Sem Formol [2026]",
     description: "Tecnologia de alisamento sem formol. Resultado em 20 min, sem salão.",
   },
   alternates: {

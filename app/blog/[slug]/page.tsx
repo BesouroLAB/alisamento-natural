@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     // Mapear slugs para títulos SEO otimizados
     const seoTitles: Record<string, string> = {
-        "alisamento-com-maizena-funciona": "Alisamento com Maizena Funciona? A Verdade Científica [2024]",
-        "fashion-gold-ou-hidraliso-qual-melhor": "Fashion Gold ou Hidraliso: Qual é Melhor? Testamos as Duas [2024]",
-        "gravida-pode-usar-progressiva-de-chuveiro": "Grávida Pode Usar Progressiva de Chuveiro? Guia de Segurança [2024]",
+        "alisamento-com-maizena-funciona": "Alisamento com Maizena Funciona? A Verdade Científica [2026]",
+        "fashion-gold-ou-hidraliso-qual-melhor": "Fashion Gold ou Hidraliso: Qual é Melhor? Testamos as Duas [2026]",
+        "gravida-pode-usar-progressiva-de-chuveiro": "Grávida Pode Usar Progressiva de Chuveiro? Guia de Segurança [2026]",
     };
 
     const optimizedTitle = seoTitles[slug] || `${post.title} | Alisamento Natural`;

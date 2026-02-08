@@ -5,7 +5,7 @@ import { posts } from "@/lib/posts";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-    title: "Blog | Alisamento Natural",
+    title: "Blog | Alisamento Natural [2026]",
     description: "Artigos, guias e análises científicas sobre alisamento capilar sem formol. Descubra a verdade por trás das receitas caseiras e tecnologias profissionais.",
 };
 

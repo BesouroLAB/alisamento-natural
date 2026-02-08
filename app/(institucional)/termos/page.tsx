@@ -22,7 +22,7 @@ export default function TermosPage() {
 
             <main className="max-w-2xl mx-auto px-5 py-10 pb-32">
                 <h1 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Termos de Uso</h1>
-                <p className="text-sm text-gray-400 mb-8">Última atualização: Fevereiro de 2024</p>
+                <p className="text-sm text-gray-400 mb-8">Última atualização: Fevereiro de 2026</p>
 
                 <div className="prose prose-gray prose-sm max-w-none">
                     <h2>1. Natureza do Serviço</h2>
