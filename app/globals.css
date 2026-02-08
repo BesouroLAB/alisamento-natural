@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+/* =============================================
+   DESIGN SYSTEM: Site Sniper - Hidraliso
+   ============================================= */
+
+/* 1. Cores Estratégicas para Nicho de Beleza */
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Brand Colors - Indigo Profundo (Premium & High Contrast) */
+  --color-brand-light: #e0e7ff;
+  --color-brand: #1e1b4b;
+  --color-brand-dark: #312e81;
+
+  /* CTA Colors - Laranja Vibrante (Máxima Conversão) */
+  --color-cta: #f97316;
+  --color-cta-hover: #ea580c;
+
+  /* Background */
+  --color-background-light: #fdfcfd;
+  --color-background-dark: #0f172a;
+
+  /* Success */
+  --color-success: #10b981;
+
+  /* Font */
+  --font-display: 'Inter', sans-serif;
+}
+
+/* 2. Animações Personalizadas */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* 3. Utility Classes para Animações */
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-button {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 4. Editorial Shadow */
+.editorial-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 5. Safe Area para Mobile */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 6. Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-display);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 7. Typography Prose Overrides */
+.prose {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: #f97316;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #6b7280;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #f97316;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: #111827;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+}
+
+.prose a {
+  color: #f97316;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #be185d;
+}
+
+.prose strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.prose blockquote {
+  border-left-color: #f97316;
+  font-style: normal;
+}

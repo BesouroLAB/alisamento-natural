@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg3)"/>
+  
+  <!-- Escudo de proteção -->
+  <path d="M200 40 L260 70 L260 130 Q260 170 200 190 Q140 170 140 130 L140 70 Z" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
+  
+  <!-- Check no escudo -->
+  <path d="M170 110 L190 130 L230 90" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Coração pequeno -->
+  <path d="M200 75 C195 65 180 65 180 80 C180 90 200 105 200 105 C200 105 220 90 220 80 C220 65 205 65 200 75" fill="#fecaca" stroke="#ef4444" stroke-width="1"/>
+  
+  <!-- Badge ANVISA -->
+  <rect x="140" y="150" width="120" height="25" rx="12" fill="white" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="167" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151" text-anchor="middle">✓ APROVADO ANVISA</text>
+  
+  <!-- Texto -->
+  <text x="200" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">GUIA DE SEGURANÇA</text>
+</svg>
