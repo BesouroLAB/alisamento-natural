@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
   <defs>
     <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="400" height="225" fill="url(#bg2)"/>
   
   <!-- VS Badge -->
-  <circle cx="200" cy="100" r="40" fill="#111827"/>
+  <circle cx="200" cy="100" r="40" fill="#f97316"/>
   <text x="200" y="110" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">VS</text>
   
   <!-- Lado Esquerdo -->
-  <rect x="30" y="60" width="100" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
-  <text x="80" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#6b7280" text-anchor="middle">FASHION</text>
-  <text x="80" y="120" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#374151" text-anchor="middle">GOLD</text>
+  <rect x="30" y="60" width="100" height="80" rx="12" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#cbd5e1" text-anchor="middle">FASHION</text>
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GOLD</text>
   
   <!-- Lado Direito - Destacado -->
-  <rect x="270" y="60" width="100" height="80" rx="10" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <rect x="270" y="60" width="100" height="80" rx="12" fill="#ea580c" stroke="#f97316" stroke-width="2"/>
   <text x="320" y="100" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">HIDRALISO</text>
-  <text x="320" y="118" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0" text-anchor="middle">VENCEDOR</text>
+  <text x="320" y="118" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffedd5" text-anchor="middle">MELHOR</text>
   
   <!-- Troféu -->
-  <text x="320" y="55" font-family="Arial" font-size="20" text-anchor="middle">🏆</text>
+  <text x="320" y="52" font-family="Arial" font-size="20" text-anchor="middle">🏆</text>
   
   <!-- Texto -->
-  <text x="200" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#166534" text-anchor="middle">COMPARATIVO 2024</text>
-  <text x="200" y="200" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Qual a melhor progressiva de chuveiro?</text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fb923c" text-anchor="middle">COMPARATIVO 2026</text>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Qual a melhor progressiva de chuveiro?</text>
 </svg>
