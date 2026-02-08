@@ -36,11 +36,15 @@ export const posts: Post[] = [
       <h2>O Perigo Oculto</h2>
       <p>Dermatologistas alertam: deixar resíduos de alimentos no couro cabeludo pode proliferar fungos e causar caspa. <strong>O barato pode sair caro.</strong></p>
 
-      <div class="my-8 p-6 bg-gradient-to-r from-indigo-50 to-orange-50 rounded-2xl border border-indigo-100">
-        <h3 class="text-indigo-900 font-bold text-lg mb-3">A Solução: Tecnologia de Baixo Peso Molecular</h3>
-        <p class="text-gray-700 mb-4 text-sm">Se a Maizena é grande demais para entrar no fio, a solução está na nanotecnologia. O mercado de cosméticos desenvolveu o <strong>Hidraliso</strong>, uma "Progressiva de Chuveiro" baseada em ácidos frutais hidrolisados. Diferente da receita caseira, esses ativos possuem baixo peso molecular. Eles são microscópicos o suficiente para atravessar a cutícula sem danificá-la, agindo onde realmente importa.</p>
-        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black py-3 px-6 rounded-full hover:scale-105 transition-transform shadow-lg text-center">
-          🛒 VERIFICAR A TECNOLOGIA PRO LISS COM DESCONTO ➔
+      <div className="my-8 p-6 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-3xl border border-indigo-500/30 text-white shadow-xl">
+        <h3 className="text-orange-400 font-black text-xl mb-3">A Solução: Tecnologia de Nanopartículas</h3>
+        <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+          Se a Maizena é grande demais para entrar no fio, a solução está na nanotecnologia. O <strong>Hidraliso</strong> utiliza ácidos frutais de baixo peso molecular que realmente atravessam a cutícula. 
+          <br /><br />
+          Antes de comprar, você pode conferir nosso <a href="/blog/fashion-gold-ou-hidraliso-qual-melhor" class="text-orange-400 underline font-bold hover:text-orange-300">comparativo completo com a Fashion Gold</a> para entender por que ele é o favorito das brasileiras.
+        </p>
+        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-6 rounded-2xl hover:scale-[1.02] transition-all shadow-[0_10px_20px_rgba(249,115,22,0.3)] text-center uppercase tracking-wider">
+          🛒 VERIFICAR ESTOQUE COM DESCONTO ➔
         </a>
       </div>
 
@@ -88,11 +92,15 @@ export const posts: Post[] = [
       <h2>3. O Fator Preço (Vitória Esmagadora: Hidraliso)</h2>
       <p>Aqui é onde o jogo vira. Um kit de tratamento da concorrente pode ultrapassar a casa dos R$ 300,00 a R$ 400,00. É um produto posicionado para o mercado de luxo. Já o Hidraliso, através de seus combos promocionais direto de fábrica, consegue reduzir o <strong>custo por aplicação para menos de R$ 25,00</strong>.</p>
 
-      <div class="my-8 bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200 text-center">
-        <h3 class="font-black text-gray-900 mb-2 text-lg">🏆 Conclusão da Redação</h3>
-        <p class="text-sm text-gray-700 mb-4">Se você busca o mesmo Liso Espelhado, com a mesma segurança, pagando um terço do valor e gastando metade do tempo no banheiro, o Hidraliso é a escolha racional e inteligente.</p>
-        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black py-3 px-8 rounded-full hover:scale-105 transition-transform shadow-lg">
-          🛒 QUERO O RESULTADO DE SALÃO PAGANDO MENOS ➔
+      <div className="my-8 bg-gradient-to-br from-indigo-950 to-slate-900 p-8 rounded-3xl border border-indigo-500/30 text-white shadow-2xl text-center">
+        <h3 className="font-black text-orange-400 mb-3 text-xl uppercase tracking-tight">🏆 Conclusão da Redação</h3>
+        <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+          Se você busca o mesmo Liso Espelhado, com a mesma segurança, pagando menos e gastando metade do tempo no banheiro, o Hidraliso é a escolha inteligente. 
+          <br /><br />
+          <strong>Dúvida sobre segurança?</strong> Leia nosso <a href="/blog/gravida-pode-usar-progressiva-de-chuveiro" class="text-orange-400 underline font-bold hover:text-orange-300">guia completo para gestantes e cabelos com química</a>.
+        </p>
+        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-8 rounded-2xl hover:scale-[1.02] transition-all shadow-[0_10px_20px_rgba(249,115,22,0.3)] uppercase tracking-wider">
+          🛒 GARANTIR MEU KIT COM VALOR PROMOCIONAL ➔
         </a>
       </div>
 
@@ -146,11 +154,14 @@ export const posts: Post[] = [
       <h2>4. Estraga o cabelo a longo prazo?</h2>
       <p><strong>Mito.</strong> O Hidraliso possui base condicionante. Enquanto ele alisa, ele repõe massa. Usuárias relatam que, após 3 meses de uso, o cabelo fica com menos pontas duplas do que quando usavam chapinha diariamente.</p>
 
-      <div class="my-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 text-center">
-        <p class="font-bold text-gray-900 mb-4">Segurança não é sorte, é escolha. Escolha produtos notificados e livres de proibidos.</p>
-        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black py-3 px-8 rounded-full hover:scale-105 transition-transform shadow-lg">
-          🛒 CONFIRA A NOTIFICAÇÃO DA ANVISA E A COMPOSIÇÃO COMPLETA ➔
+      <div className="my-8 p-8 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-3xl border border-indigo-500/30 text-center text-white shadow-2xl">
+        <p className="font-bold text-orange-400 mb-6 text-lg">Segurança não é sorte, é ciência. Escolha a tecnologia que respeita a sua saúde.</p>
+        <a href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-50 hover:bg-white text-indigo-950 font-black py-4 px-8 rounded-2xl hover:scale-[1.02] transition-all shadow-[0_10px_20px_rgba(0,0,0,0.2)] uppercase tracking-wider">
+          🛒 CONFERIR COMPOSIÇÃO NO SITE OFICIAL ➔
         </a>
+        <p className="mt-4 text-[10px] text-gray-400 italic">
+          Ps: Verifique também nosso post sobre <a href="/blog/alisamento-com-maizena-funciona" class="text-orange-400 underline">por que o amido de milho é um mito perigoso</a>.
+        </p>
       </div>
       
       <p class="text-xs text-gray-400 mt-8 italic">Nota da Redação: Este conteúdo tem caráter informativo e não substitui a consulta médica.</p>

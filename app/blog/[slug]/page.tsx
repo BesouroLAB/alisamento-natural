@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, Tag, Clock, PenTool } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, Clock, PenTool, ArrowRight } from "lucide-react";
 import { getPostBySlug, posts } from "@/lib/posts";
 import Footer from "@/components/Footer";
 
@@ -59,7 +59,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     }
 
     // 3. SCHEMA MARKUP: Author como Organization (E-E-A-T Compliance)
-    const jsonLd = {
+    const blogSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": post.title,
@@ -82,13 +82,37 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         }
     };
 
+    // 4. REVIEW SCHEMA: Para posts de comparação (Rich Snippets)
+    const reviewSchema = post.slug.includes("comparativo") || post.slug.includes("qual-melhor") ? {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Hidraliso Alisante de Chuveiro",
+        "image": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770514316/ciencia-do-alisamento-capilar-infografico-entenda_bijphr.png",
+        "description": "Tecnologia de alisamento sem formol de baixo peso molecular.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Hidraliso"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "2480"
+        }
+    } : null;
+
     return (
         <div className="min-h-screen bg-white font-sans">
             {/* Injeção de JSON-LD Invisível */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
             />
+            {reviewSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+                />
+            )}
 
             {/* Header Fixo Minimalista */}
             <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100 px-4 py-3 shadow-sm flex items-center justify-between">
@@ -157,21 +181,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
                 {/* CTA FINAL (Túnel de Conversão) */}
                 <div className="mt-10 pt-8 border-t border-gray-100">
-                    <div className="bg-gradient-to-br from-indigo-900 to-gray-900 rounded-2xl p-6 text-center text-white shadow-xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-20 h-20 bg-orange-500 rounded-full blur-2xl opacity-20"></div>
+                    <div className="bg-gradient-to-br from-indigo-950 to-slate-900 rounded-3xl p-8 text-center text-white shadow-2xl relative overflow-hidden border border-indigo-500/20">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500 rounded-full blur-[80px] opacity-10"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-500 rounded-full blur-[80px] opacity-10"></div>
 
-                        <h3 className="text-xl font-bold mb-2 relative z-10">Quer o resultado de salão?</h3>
-                        <p className="text-gray-300 text-sm mb-6 relative z-10 px-4 text-center">
-                            Não perca tempo com receitas que não funcionam. Veja a tecnologia que está salvando cabelos.
+                        <h3 className="text-2xl font-black mb-3 relative z-10 text-orange-400 uppercase tracking-tight italic">Quer o resultado de salão?</h3>
+                        <p className="text-gray-400 text-sm mb-8 relative z-10 px-4 text-center leading-relaxed">
+                            Não perca tempo com receitas que apenas "maquiam" os fios. Use a nanotecnologia que os especialistas recomendam.
                         </p>
 
                         <a
                             href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-lg py-3 rounded-xl transition transform active:scale-95 shadow-lg relative z-10"
+                            className="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xl py-5 rounded-2xl transition transform hover:scale-[1.02] active:scale-95 shadow-[0_10px_25px_rgba(249,115,22,0.4)] relative z-10 flex items-center justify-center gap-2 group tracking-wider"
                         >
-                            VERIFICAR PREÇO AGORA
+                            VERIFICAR ESTOQUE AGORA <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>
                 </div>

@@ -259,18 +259,19 @@ export default function Home() {
           </article>
 
           {/* CTA Box - Gatilho de Escassez e Garantia */}
-          <div className="mt-12 p-8 bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl text-center text-white shadow-2xl relative overflow-hidden border-2 border-orange-400/30">
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="mt-12 p-8 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-3xl text-center text-white shadow-2xl relative overflow-hidden border border-indigo-500/30">
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl"></div>
 
-            <div className="mb-6">
-              <span className="bg-white/20 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">
-                GARANTIA BLINDADA DE 30 DIAS
+            <div className="mb-6 relative z-10">
+              <span className="bg-orange-500/20 text-orange-400 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block border border-orange-500/30">
+                🛡️ GARANTIA BLINDADA DE 30 DIAS
               </span>
               <h3 className="text-2xl md:text-3xl font-black mb-4 leading-tight">
                 Você tem 30 dias para testar.
               </h3>
-              <p className="text-orange-50 text-sm leading-relaxed mb-6">
-                A confiança na tecnologia é tão grande que o fabricante oferece uma garantia blindada. Se você usar e o seu cabelo não ficar com o efeito "liso de salão", ou se você simplesmente não gostar do cheiro, eles devolvem 100% do seu dinheiro. Sem letras miúdas.
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 px-4">
+                A confiança na tecnologia é tão grande que o fabricante oferece uma garantia blindada. Se não gostar dos resultados, eles devolvem 100% do seu dinheiro. Sem letras miúdas.
               </p>
             </div>
 
@@ -278,9 +279,11 @@ export default function Home() {
               href="https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full bg-white text-orange-700 font-black text-xl py-5 rounded-2xl transition transform hover:scale-[1.03] active:scale-95 shadow-[0_10px_30px_rgba(0,0,0,0.2)] relative z-10 animate-pulse-button"
+              className="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xl py-5 rounded-2xl transition transform hover:scale-[1.03] active:scale-95 shadow-[0_10px_30px_rgba(249,115,22,0.3)] relative z-10 group"
             >
-              👉 VERIFICAR ESTOQUE PROMOCIONAL
+              <span className="flex items-center justify-center gap-2">
+                VERIFICAR ESTOQUE AGORA <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </span>
             </a>
 
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-[10px] font-bold text-orange-100/80">

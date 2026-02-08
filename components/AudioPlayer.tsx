@@ -59,8 +59,8 @@ export default function AudioPlayer() {
                 {/* Info do Episódio */}
                 <div className="flex-1 min-w-0 text-white">
                     <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                        <span className="bg-white/25 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                            🎙️ Exclusivo
+                        <span className="bg-white/25 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-sm flex items-center gap-1">
+                            🎙️ OUVIR PODCAST
                         </span>
                         <span className="text-[10px] font-bold flex items-center gap-1 opacity-90">
                             <Headphones size={10} /> 3.2k ouvindo

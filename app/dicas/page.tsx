@@ -12,19 +12,19 @@ export default function DicasPage() {
         <div className="min-h-screen bg-white flex flex-col">
             {/* Header */}
             <header className="sticky top-0 z-40 bg-white border-b border-gray-100 px-4 py-3 shadow-sm flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition group">
+                <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition group">
                     <ArrowLeft size={18} />
                     <span className="text-xs font-bold uppercase tracking-wide">Voltar</span>
                 </Link>
-                <div className="flex items-center gap-1.5 text-pink-600 font-bold text-sm uppercase tracking-wider">
-                    <Sparkles size={16} /> Guia de Aplicação
+                <div className="flex items-center gap-1.5 text-indigo-900 font-bold text-sm uppercase tracking-wider">
+                    <Sparkles size={16} className="text-orange-500" /> Guia de Aplicação
                 </div>
             </header>
 
             <main className="flex-1 max-w-2xl mx-auto px-5 py-8 pb-32">
                 {/* Título Principal */}
                 <div className="text-center mb-10">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-pink-600 font-bold bg-pink-50 px-3 py-1 rounded-full">Passo a Passo</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-indigo-600 font-bold bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Passo a Passo</span>
                     <h1 className="text-3xl font-black text-gray-900 mt-4 mb-3 tracking-tight">
                         Como Aplicar o Hidraliso em Casa
                     </h1>
@@ -36,15 +36,15 @@ export default function DicasPage() {
                 {/* Timeline de Passos */}
                 <div className="relative">
                     {/* Linha vertical conectora */}
-                    <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-pink-300 via-pink-400 to-green-400"></div>
+                    <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-indigo-200 via-indigo-400 to-orange-400"></div>
 
                     {/* PASSO 1 */}
                     <div className="relative flex gap-5 mb-10">
-                        <div className="shrink-0 size-12 rounded-full bg-pink-100 flex items-center justify-center z-10 border-4 border-white shadow-md">
-                            <Droplets className="text-pink-600" size={20} />
+                        <div className="shrink-0 size-12 rounded-full bg-indigo-100 flex items-center justify-center z-10 border-4 border-white shadow-md">
+                            <Droplets className="text-indigo-600" size={20} />
                         </div>
                         <div className="flex-1 bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                            <span className="text-[10px] text-pink-600 font-bold uppercase tracking-wider">Passo 1</span>
+                            <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider">Passo 1</span>
                             <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2">Lave o Cabelo Normalmente</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 Use seu shampoo favorito para remover resíduos de produtos. O cabelo deve estar limpo, mas ainda <strong>úmido</strong> para a aplicação.
@@ -57,11 +57,11 @@ export default function DicasPage() {
 
                     {/* PASSO 2 */}
                     <div className="relative flex gap-5 mb-10">
-                        <div className="shrink-0 size-12 rounded-full bg-pink-200 flex items-center justify-center z-10 border-4 border-white shadow-md">
-                            <span className="text-pink-700 font-black text-lg">2</span>
+                        <div className="shrink-0 size-12 rounded-full bg-indigo-200 flex items-center justify-center z-10 border-4 border-white shadow-md">
+                            <span className="text-indigo-700 font-black text-lg">2</span>
                         </div>
                         <div className="flex-1 bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                            <span className="text-[10px] text-pink-600 font-bold uppercase tracking-wider">Passo 2</span>
+                            <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider">Passo 2</span>
                             <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2">Aplique o Hidraliso Mecha por Mecha</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 Divida o cabelo em seções. Aplique o produto da raiz às pontas, sem economizar. Massageie bem para garantir <strong>cobertura completa</strong>.
@@ -79,11 +79,11 @@ export default function DicasPage() {
 
                     {/* PASSO 3 */}
                     <div className="relative flex gap-5 mb-10">
-                        <div className="shrink-0 size-12 rounded-full bg-pink-300 flex items-center justify-center z-10 border-4 border-white shadow-md">
-                            <span className="text-pink-800 font-black text-lg">3</span>
+                        <div className="shrink-0 size-12 rounded-full bg-indigo-300 flex items-center justify-center z-10 border-4 border-white shadow-md">
+                            <span className="text-indigo-800 font-black text-lg">3</span>
                         </div>
                         <div className="flex-1 bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                            <span className="text-[10px] text-pink-600 font-bold uppercase tracking-wider">Passo 3</span>
+                            <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider">Passo 3</span>
                             <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2">Deixe Agir por 3 Minutos</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 Aguarde o tempo indicado. Os ativos de baixo peso molecular penetram na cutícula e começam a <strong>realinhar as pontes de hidrogênio</strong>.
@@ -96,11 +96,11 @@ export default function DicasPage() {
 
                     {/* PASSO 4 */}
                     <div className="relative flex gap-5 mb-10">
-                        <div className="shrink-0 size-12 rounded-full bg-pink-400 flex items-center justify-center z-10 border-4 border-white shadow-md">
+                        <div className="shrink-0 size-12 rounded-full bg-orange-500 flex items-center justify-center z-10 border-4 border-white shadow-md">
                             <ThermometerSun className="text-white" size={20} />
                         </div>
                         <div className="flex-1 bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                            <span className="text-[10px] text-pink-600 font-bold uppercase tracking-wider">Passo 4</span>
+                            <span className="text-[10px] text-orange-600 font-bold uppercase tracking-wider">Passo 4</span>
                             <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2">Enxágue e Seque com Secador</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 Lave normalmente e seque os fios. Use escova e secador para <strong>ativar termicamente</strong> o produto. É aqui que a mágica acontece!
@@ -113,30 +113,32 @@ export default function DicasPage() {
 
                     {/* RESULTADO FINAL */}
                     <div className="relative flex gap-5">
-                        <div className="shrink-0 size-12 rounded-full bg-green-500 flex items-center justify-center z-10 border-4 border-white shadow-md">
+                        <div className="shrink-0 size-12 rounded-full bg-teal-500 flex items-center justify-center z-10 border-4 border-white shadow-md">
                             <CheckCircle className="text-white" size={22} />
                         </div>
-                        <div className="flex-1 bg-green-50 rounded-2xl p-5 border border-green-200">
-                            <span className="text-[10px] text-green-600 font-bold uppercase tracking-wider">Resultado</span>
-                            <h3 className="text-lg font-bold text-green-800 mt-1 mb-2">Cabelo Liso e Brilhante! ✨</h3>
-                            <p className="text-sm text-green-700 leading-relaxed">
-                                Pronto! Seu cabelo estará liso, sedoso e com aquele brilho de salão. O efeito dura até a próxima lavagem.
+                        <div className="flex-1 bg-teal-50 rounded-2xl p-5 border border-teal-200">
+                            <span className="text-[10px] text-teal-600 font-bold uppercase tracking-wider">Resultado</span>
+                            <h3 className="text-lg font-bold text-teal-800 mt-1 mb-2">Cabelo Liso e Brilhante! ✨</h3>
+                            <p className="text-sm text-teal-700 leading-relaxed">
+                                Pronto! Seu cabelo estará liso, sedoso e com aquele brilho de salão. O efeito dura até 90 dias.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                {/* CTA */}
-                <div className="mt-12 p-6 bg-gradient-to-br from-pink-600 to-pink-700 rounded-2xl text-center text-white shadow-xl">
-                    <h3 className="text-xl font-bold mb-2">Pronta para testar?</h3>
-                    <p className="text-pink-100 text-sm mb-5">
-                        Aproveite as ofertas exclusivas na Amazon.
+                {/* CTA Final Sincronizado */}
+                <div className="mt-12 p-8 bg-gradient-to-br from-indigo-950 to-slate-900 rounded-3xl text-center text-white shadow-2xl relative overflow-hidden border border-indigo-500/30">
+                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
+
+                    <h3 className="text-xl font-bold mb-2 relative z-10">Pronta para testar?</h3>
+                    <p className="text-gray-400 text-sm mb-6 relative z-10">
+                        Aproveite as ofertas exclusivas verificadas para hoje.
                     </p>
                     <Link
                         href="/ofertas"
-                        className="inline-block w-full bg-white text-pink-600 font-black py-3 px-8 rounded-xl hover:bg-pink-50 transition"
+                        className="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-8 rounded-2xl transition transform hover:scale-[1.03] active:scale-95 shadow-[0_10px_30px_rgba(249,115,22,0.3)] relative z-10 flex items-center justify-center gap-2 uppercase tracking-wider"
                     >
-                        VER OFERTAS →
+                        VER OFERTAS DISPONÍVEIS ➔
                     </Link>
                 </div>
             </main>

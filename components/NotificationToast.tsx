@@ -5,10 +5,10 @@ import Link from "next/link";
 
 // Mensagens editoriais e de conversão
 const messages = [
-    { icon: TrendingUp, text: "🔥 Trending: Mais lido sobre tecnologia capilar", color: "text-orange-500" },
-    { icon: Users, text: "247 pessoas lendo sobre o Hidraliso agora", color: "text-blue-500" },
-    { icon: Tag, text: "Notícia: Lote promocional identificado na Amazon", color: "text-pink-500" },
-    { icon: Flame, text: "Aviso: Verificamos cupons ativos para hoje", color: "text-red-500" },
+    { icon: TrendingUp, text: "Leitura recomendada: A ciência por trás do liso perfeito", color: "text-indigo-600" },
+    { icon: Users, text: "Várias leitoras estão consultando o comparativo agora", color: "text-blue-600" },
+    { icon: Tag, text: "Dica: Encontramos um link com estoque promocional", color: "text-orange-600" },
+    { icon: Flame, text: "Aviso: Novos cupons foram validados pela redação", color: "text-amber-600" },
 ];
 
 export default function NotificationToast() {
