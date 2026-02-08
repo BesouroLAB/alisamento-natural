@@ -103,9 +103,12 @@ const organizationSchema = {
   url: "https://alisamentonatural.com.br",
   logo: {
     "@type": "ImageObject",
-    url: "https://alisamentonatural.com.br/favicon.svg",
-    width: 512,
-    height: 512,
+    "url": "https://alisamentonatural.com.br/favicon.svg",
+    "width": 512,
+    "height": 512,
+    "license": "https://alisamentonatural.com.br/termos",
+    "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+    "copyrightNotice": "Alisamento Natural - Todos os direitos reservados"
   },
   sameAs: [
     // Adicione redes sociais quando tiver:

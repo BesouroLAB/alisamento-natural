@@ -14,7 +14,13 @@ const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Hidraliso Alisante de Chuveiro",
-  "image": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
+    "license": "https://alisamentonatural.com.br/termos",
+    "acquireLicensePage": "https://alisamentonatural.com.br/termos",
+    "copyrightNotice": "Alisamento Natural - Imagem sob licença editorial"
+  },
   "description": "Progressiva de chuveiro sem formol com tecnologia termoativada. Alisa cabelos ondulados, cacheados e crespos em casa.",
   "brand": {
     "@type": "Brand",
