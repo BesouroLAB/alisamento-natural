@@ -68,35 +68,36 @@ export default function FAQAccordion() {
     };
 
     return (
-        <section className="max-w-3xl mx-auto my-12 px-5" id="faq">
+        <section className="max-w-3xl mx-auto my-12 px-5" id="faq" suppressHydrationWarning>
             {/* Injeção Invisível para SEO */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
-            <div className="flex items-center gap-3 mb-6">
-                <div className="bg-indigo-100 p-2 rounded-full text-indigo-600">
+            <div className="flex items-center gap-3 mb-6" suppressHydrationWarning>
+                <div className="bg-indigo-100 p-2 rounded-full text-indigo-600" suppressHydrationWarning>
                     <HelpCircle size={24} />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Perguntas Frequentes (FAQ): Tire suas dúvidas sobre o Alisamento Natural</h2>
+                <h2 className="text-2xl font-bold text-gray-900 tracking-tight" suppressHydrationWarning>Perguntas Frequentes (FAQ): Tire suas dúvidas sobre o Alisamento Natural</h2>
             </div>
 
-            <p className="text-gray-600 text-sm mb-6">
+            <p className="text-gray-600 text-sm mb-6" suppressHydrationWarning>
                 Separamos as 10 perguntas mais comuns enviadas por nossas leitoras e respondidas com base na bula oficial e na nossa análise de mercado.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-3" suppressHydrationWarning>
                 {faqData.map((item, index) => (
                     <div
                         key={index}
                         className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-200 hover:border-orange-300 group"
+                        suppressHydrationWarning
                     >
                         <button
                             onClick={() => toggleFAQ(index)}
                             className="w-full flex justify-between items-start p-5 text-left bg-white focus:outline-none"
                         >
-                            <span className="font-semibold text-gray-800 text-sm md:text-base pr-4 leading-relaxed group-hover:text-orange-600 transition-colors">
+                            <span className="font-semibold text-gray-800 text-sm md:text-base pr-4 leading-relaxed group-hover:text-orange-600 transition-colors" suppressHydrationWarning>
                                 {item.question}
                             </span>
                             {openIndex === index ? (
@@ -109,8 +110,9 @@ export default function FAQAccordion() {
                         <div
                             className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                                 }`}
+                            suppressHydrationWarning
                         >
-                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white">
+                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white" suppressHydrationWarning>
                                 {item.answer}
                             </div>
                         </div>

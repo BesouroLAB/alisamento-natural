@@ -6,7 +6,7 @@ export default function MobileStickyFooter() {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 safe-area-bottom shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
       {/* Mobile: Grid 4 colunas / Desktop: Flex centralizado */}
-      <div className="max-w-xl mx-auto grid grid-cols-4 md:flex md:justify-center md:gap-12 h-16">
+      <div className="max-w-xl mx-auto grid grid-cols-4 md:flex md:justify-center md:gap-12 h-16" suppressHydrationWarning>
         {/* Início */}
         <Link
           href="/"

@@ -136,22 +136,25 @@
 
 ## 5. Estrutura de Links Internos (Silo)
 
-### Cluster Implementado:
+### Cluster Implementado (Atualizado 2026-02-18):
 
 ```
 HOME (Money Page)
-├── /blog/alisamento-com-maizena-funciona
-│   └── Link → /blog/fashion-gold-ou-hidraliso-qual-melhor
-├── /blog/fashion-gold-ou-hidraliso-qual-melhor
-│   └── Link → /blog/gravida-pode-usar-progressiva-de-chuveiro
-├── /blog/gravida-pode-usar-progressiva-de-chuveiro
-│   └── Link → /blog/alisamento-com-maizena-funciona
+├── /blog/alisamento-natural-com-maizena-funciona (ToF - Isca)
+│   ├── Link → /blog/hidraliso-funciona-resenha
+│   └── Link → /blog/melhores-progressivas-de-chuveiro
+├── /blog/hidraliso-funciona-resenha (BoF - Conversão)
+│   ├── Link → /blog/alisamento-natural-com-maizena-funciona
+│   └── Link → /blog/melhores-progressivas-de-chuveiro
+├── /blog/melhores-progressivas-de-chuveiro (MoF - Comparação)
+│   ├── Link → /blog/alisamento-natural-com-maizena-funciona
+│   └── Link → /blog/hidraliso-funciona-resenha
 ├── /dicas (How-To)
 │   └── Link → /ofertas
 └── /ofertas (Conversão)
 ```
 
-**Status:** ✅ Links cruzados implementados
+**Status:** ✅ Links cruzados triangulares implementados (cada artigo linka para os outros 2)
 
 ---
 

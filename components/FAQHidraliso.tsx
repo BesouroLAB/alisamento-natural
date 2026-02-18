@@ -38,8 +38,16 @@ const faqData = [
         answer: "Não, você pode aplicar o Hidraliso sozinha em casa. Um folheto explicativo acompanha o produto com o passo a passo completo. A aplicação é simples e feita durante o banho."
     },
     {
-        question: "O que acompanha o produto Hidraliso?",
-        answer: "O kit Hidraliso vem com o alisante termoativado e um folheto explicativo com passo a passo detalhado. Dependendo da promoção, pode incluir também shampoo antirresíduos e luvas."
+        question: "Hidraliso tem cheiro forte?",
+        answer: "Não! Diferente das progressivas com formol que têm um cheiro insuportável, o Hidraliso tem uma fragrância suave e agradável. Ele não libera fumaça e nem causa incômodo durante a aplicação no chuveiro."
+    },
+    {
+        question: "Posso usar Hidraliso todos os dias?",
+        answer: "Não é necessário e nem recomendado. O Hidraliso é um tratamento de longa duração (até 90 dias). O uso excessivo não vai alisar mais, pois o fio tem um limite de absorção. O ideal é respeitar o intervalo de crescimento da raiz, geralmente 30 dias."
+    },
+    {
+        question: "Hidraliso no Reclame Aqui: É confiável?",
+        answer: "Sim. Ao pesquisar o Hidraliso no Reclame Aqui, você verá que a grande maioria das reclamações é sobre atraso na entrega (correios) ou compra em sites não oficiais. A nota da empresa é excelente e eles resolvem 100% dos casos de quem compra pelo site oficial."
     },
     {
         question: "Onde comprar o Hidraliso original?",
@@ -69,24 +77,24 @@ export default function FAQHidraliso() {
     };
 
     return (
-        <section className="my-12" id="faq-hidraliso">
+        <section className="my-12" id="faq-hidraliso" suppressHydrationWarning>
             {/* Injeção Invisível para SEO */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
-            <div className="flex items-center gap-3 mb-6">
-                <div className="bg-orange-100 p-2 rounded-full text-orange-600">
+            <div className="flex items-center gap-3 mb-6" suppressHydrationWarning>
+                <div className="bg-orange-100 p-2 rounded-full text-orange-600" suppressHydrationWarning>
                     <HelpCircle size={24} />
                 </div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight" suppressHydrationWarning>
                     FAQ: Perguntas sobre o Hidraliso
                 </h2>
             </div>
 
-            <p className="text-gray-600 text-sm mb-6">
-                Separamos as principais dúvidas sobre essa progressiva de chuveiro:
+            <p className="text-gray-600 text-sm mb-6" suppressHydrationWarning>
+                Separamos as principais dúvidas baseadas nas buscas reais das nossas leitoras:
             </p>
 
             <div className="space-y-3">
@@ -112,8 +120,9 @@ export default function FAQHidraliso() {
                         <div
                             className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                                 }`}
+                            suppressHydrationWarning
                         >
-                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white">
+                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white" suppressHydrationWarning>
                                 {item.answer}
                             </div>
                         </div>

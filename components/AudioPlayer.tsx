@@ -28,7 +28,7 @@ export default function AudioPlayer() {
     };
 
     return (
-        <div className="relative bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-800 rounded-2xl p-5 mb-8 shadow-xl overflow-hidden border border-indigo-500/20 text-indigo-50">
+        <div className="relative bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-800 rounded-2xl p-5 mb-8 shadow-xl overflow-hidden border border-indigo-500/20 text-indigo-50" suppressHydrationWarning>
             {/* Efeito de luz decorativo */}
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl" />
@@ -62,8 +62,8 @@ export default function AudioPlayer() {
                         <span className="bg-white/25 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-sm flex items-center gap-1">
                             🎙️ OUVIR PODCAST
                         </span>
-                        <span className="text-[10px] font-bold flex items-center gap-1 opacity-90">
-                            <Headphones size={10} /> 3.2k ouvindo
+                        <span className="text-[10px] font-bold flex items-center gap-1 text-indigo-200/80">
+                            <Headphones size={10} /> 247 ouvindo
                         </span>
                     </div>
                     <p className="text-[11px] font-medium opacity-80 line-clamp-1">

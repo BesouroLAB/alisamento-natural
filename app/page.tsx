@@ -453,6 +453,14 @@ export default function Home() {
               <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">Hidraliso Funciona? Veja a Resenha Completa</p>
               <p className="text-xs text-gray-500 mt-2">Nossa análise editorial completa sobre esta progressiva de chuveiro.</p>
             </Link>
+            <Link href="/blog/hidraliso-vs-la-bella-liss" className="group block p-5 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition border border-gray-100 shadow-sm">
+              <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">Hidraliso vs La Bella Liss: Comparativo Real</p>
+              <p className="text-xs text-gray-500 mt-2">Qual alisa mais? Qual dura mais? Veja preço, resultado e duração lado a lado.</p>
+            </Link>
+            <Link href="/blog/como-usar-hidraliso-passo-a-passo" className="group block p-5 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition border border-gray-100 shadow-sm">
+              <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">Como Usar o Hidraliso: Passo a Passo</p>
+              <p className="text-xs text-gray-500 mt-2">Guia completo com 6 etapas e os 5 erros que destroem o resultado.</p>
+            </Link>
             <Link href="/blog/melhores-progressivas-de-chuveiro" className="group block p-5 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition border border-gray-100 shadow-sm">
               <p className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition">As 10 Melhores Progressivas de Chuveiro</p>
               <p className="text-xs text-gray-500 mt-2">Ranking atualizado com La Bella Liss, Super Poderes e Hidraliso.</p>

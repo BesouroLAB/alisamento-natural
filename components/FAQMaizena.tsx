@@ -38,12 +38,8 @@ const faqData = [
         answer: "Sim, você pode usar receitas de maizena antes de fazer uma progressiva, desde que lave bem o cabelo e remova todos os resíduos. A maizena não interfere quimicamente na progressiva, mas resíduos no fio podem impedir que o produto profissional penetre corretamente."
     },
     {
-        question: "Qual é melhor: alisamento caseiro ou de salão?",
-        answer: "Depende do seu objetivo. Se você quer apenas hidratar e 'desmaiar' um pouco o volume, receitas caseiras são válidas. Se você quer liso duradouro e definitivo, precisa de tecnologia profissional — seja no salão ou com produtos termoativados de uso doméstico (como a progressiva de chuveiro)."
-    },
-    {
-        question: "A progressiva de chuveiro é segura para cabelo crespo?",
-        answer: "Sim. Progressivas de chuveiro modernas e livres de formol são desenvolvidas especialmente para cabelos crespos e afro (curvaturas 4A, 4B e 4C). A tecnologia de baixo peso molecular penetra até nos fios mais resistentes, promovendo redução de volume e alisamento gradual."
+        question: "Existe alguma receita caseira que seja perigosa?",
+        answer: "Sim! Cuidado com receitas que sugerem misturar 'pó xadrez', 'açúcar mascavo fervido' ou outros itens não capilares. Isso pode causar queimaduras no couro cabeludo e quebra severa dos fios. Se você quer segurança, use produtos testados e aprovados pela Anvisa."
     }
 ];
 
@@ -69,23 +65,23 @@ export default function FAQMaizena() {
     };
 
     return (
-        <section className="my-12" id="faq-maizena">
+        <section className="my-12" id="faq-maizena" suppressHydrationWarning>
             {/* Injeção Invisível para SEO */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
-            <div className="flex items-center gap-3 mb-6">
-                <div className="bg-amber-100 p-2 rounded-full text-amber-600">
+            <div className="flex items-center gap-3 mb-6" suppressHydrationWarning>
+                <div className="bg-amber-100 p-2 rounded-full text-amber-600" suppressHydrationWarning>
                     <HelpCircle size={24} />
                 </div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight" suppressHydrationWarning>
                     Perguntas Frequentes: Maizena e Alisamento Natural
                 </h2>
             </div>
 
-            <p className="text-gray-600 text-sm mb-6">
+            <p className="text-gray-600 text-sm mb-6" suppressHydrationWarning>
                 Separamos as dúvidas mais comuns sobre receitas caseiras de alisamento e respondemos com base científica.
             </p>
 
@@ -112,8 +108,9 @@ export default function FAQMaizena() {
                         <div
                             className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                                 }`}
+                            suppressHydrationWarning
                         >
-                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white">
+                            <div className="p-5 pt-0 text-gray-600 text-sm leading-relaxed bg-white" suppressHydrationWarning>
                                 {item.answer}
                             </div>
                         </div>

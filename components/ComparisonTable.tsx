@@ -11,8 +11,8 @@ const items = [
 
 export default function ComparisonTable() {
     return (
-        <section className="py-6">
-            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+        <section className="py-6" suppressHydrationWarning>
+            <div className="relative bg-gradient-to-br from-indigo-950 via-indigo-900 to-slate-800 rounded-2xl p-5 mb-8 shadow-xl overflow-hidden border border-indigo-500/20 text-indigo-50" suppressHydrationWarning>
                 {/* Cabeçalho */}
                 <div className="bg-gray-50 p-4 border-b border-gray-100">
                     <h3 className="text-center font-bold text-gray-800">

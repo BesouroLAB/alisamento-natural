@@ -154,7 +154,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Preconnect para Cloudinary (imagens) */}
         <link rel="preconnect" href="https://res.cloudinary.com" />
@@ -174,6 +174,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} font-sans bg-[var(--color-background-light)] text-gray-900 antialiased min-h-screen pb-24`}
+        suppressHydrationWarning
       >
         {/* Google Analytics 4 (GA4) */}
         <Script

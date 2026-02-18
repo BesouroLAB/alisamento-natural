@@ -47,7 +47,7 @@ export default function NotificationToast() {
             rel="noopener noreferrer"
             className="fixed top-20 right-4 z-[60] animate-slide-in-right group cursor-pointer"
         >
-            <div className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-lg py-2 px-4 shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex items-center gap-3 max-w-[280px] hover:border-orange-300 transition-all duration-300 group">
+            <div className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-lg py-2 px-4 shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex items-center gap-3 max-w-[280px] hover:border-orange-300 transition-all duration-300 group" suppressHydrationWarning>
                 <div className="bg-orange-50 p-1.5 rounded-md shrink-0 ring-1 ring-orange-100">
                     <IconComponent size={14} className={currentMessage.color} />
                 </div>

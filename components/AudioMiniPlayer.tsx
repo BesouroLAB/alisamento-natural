@@ -28,7 +28,7 @@ export default function AudioMiniPlayer() {
                             <Headphones size={10} /> Ouvindo agora
                         </span>
                         <div className="h-2 w-[1px] bg-indigo-400/30" />
-                        <span className="text-[10px] text-gray-500 font-medium truncate">
+                        <span className="text-[10px] text-indigo-300/70 font-medium truncate">
                             {title}
                         </span>
                     </div>
@@ -47,7 +47,7 @@ export default function AudioMiniPlayer() {
                         setIsPlaying(false);
                         // Reset progress via setAudioData seria ideal aqui
                     }}
-                    className="text-gray-400 hover:text-gray-600 p-1"
+                    className="text-indigo-300/50 hover:text-indigo-200 p-1"
                 >
                     <X size={16} />
                 </button>

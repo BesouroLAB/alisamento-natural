@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import FAQMaizena from "@/components/FAQMaizena";
 import FAQRanking from "@/components/FAQRanking";
 import FAQHidraliso from "@/components/FAQHidraliso";
+import FAQComparativo from "@/components/FAQComparativo";
+import FAQComoUsar from "@/components/FAQComoUsar";
 
 // ================================================================================
 // 🚀 SSG: Gera as páginas estáticas no build (Velocidade Extrema)
@@ -26,27 +28,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const post = getPostBySlug(slug);
     if (!post) return {};
 
-    // Títulos SEO otimizados para cliques (CTR)
+    // Títulos SEO otimizados para cliques (CTR) — baseado em queries reais do GSC
     const seoTitles: Record<string, string> = {
-        "alisamento-natural-com-maizena-funciona": "Alisamento Natural com Maizena: Receita Caseira Alisa o Cabelo?",
-        "hidraliso-funciona-resenha": "Hidraliso é Bom? O Alisante de Chuveiro Funciona Mesmo? [Resenha]",
-        "melhores-progressivas-de-chuveiro": "Top 10 Melhores Progressivas de Chuveiro: LaBellaLis, SuperPoderes, Hidraliso",
+        "alisamento-natural-com-maizena-funciona": "Alisamento com Maizena e Leite Funciona? É Verdade que Alisa o Cabelo?",
+        "hidraliso-funciona-resenha": "Hidraliso Funciona? É Bom e Vale a Pena? Veja Resultado Real [Resenha 2026]",
+        "melhores-progressivas-de-chuveiro": "As 10 Melhores Progressivas de Chuveiro em 2026 (Ranking Atualizado)",
+        "hidraliso-vs-la-bella-liss": "Hidraliso vs La Bella Liss: Qual é Melhor? Comparativo Real [2026]",
+        "como-usar-hidraliso-passo-a-passo": "Como Usar Hidraliso Passo a Passo: Guia Completo [2026]",
+    };
+
+    // Meta descriptions otimizadas por artigo — baseado em queries do GSC
+    const seoDescriptions: Record<string, string> = {
+        "alisamento-natural-com-maizena-funciona": "É verdade que maizena alisa o cabelo? Veja a receita viral de alisamento natural com maizena e leite, se funciona de verdade e qual alternativa dá resultado real.",
+        "hidraliso-funciona-resenha": "Hidraliso funciona mesmo? Hidraliso é bom? Testamos este alisante de chuveiro e mostramos o resultado real. Veja composição, como usar e se vale a pena comprar.",
+        "melhores-progressivas-de-chuveiro": "Qual a melhor progressiva de chuveiro? Veja o ranking atualizado com La Bella Liss, Super Poderes, Hidraliso e mais. Comparamos preço, resultado e duração.",
+        "hidraliso-vs-la-bella-liss": "Comparativo completo entre Hidraliso e La Bella Liss. Qual alisa mais? Qual dura mais? Qual é mais barata? Veja preço, resultado e duração lado a lado.",
+        "como-usar-hidraliso-passo-a-passo": "Guia completo de como usar o Hidraliso passo a passo. Aprenda a aplicar a progressiva de chuveiro em casa e evite os 5 erros que destroem o resultado.",
     };
 
     const optimizedTitle = seoTitles[slug] || post.title;
+    const optimizedDescription = seoDescriptions[slug] || post.description;
     const imageUrl = post.thumbnail.startsWith("http") ? post.thumbnail : `https://alisamentonatural.com.br${post.thumbnail}`;
 
     return {
         title: optimizedTitle,
-        description: post.description,
+        description: optimizedDescription,
         keywords: ["alisamento natural", "hidraliso", "progressiva de chuveiro", "sem formol", post.category.toLowerCase()],
         authors: [{ name: "Redação AlisamentoNatural", url: "https://alisamentonatural.com.br" }],
         openGraph: {
             title: optimizedTitle,
-            description: post.description,
+            description: optimizedDescription,
             type: "article",
             publishedTime: post.date,
-            modifiedTime: post.date,
+            modifiedTime: "2026-02-18",
             authors: ["Redação AlisamentoNatural"],
             section: post.category,
             tags: ["alisamento natural", "hidraliso", "progressiva de chuveiro"],
@@ -62,7 +76,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         twitter: {
             card: "summary_large_image",
             title: optimizedTitle,
-            description: post.description,
+            description: optimizedDescription,
             images: [imageUrl],
         },
         alternates: {
@@ -163,7 +177,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             }
         },
         "datePublished": post.date,
-        "dateModified": post.date,
+        "dateModified": "2026-02-18",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": articleUrl
@@ -320,6 +334,30 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             { "@type": "HowToStep", "name": "Misturar", "text": "Misturar com uma máscara de hidratação" },
             { "@type": "HowToStep", "name": "Aplicar", "text": "Aplicar no cabelo e deixar agir por 20 minutos" }
         ]
+    } : slug === "como-usar-hidraliso-passo-a-passo" ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Como Usar o Hidraliso: Passo a Passo Completo",
+        "description": "Guia completo de como aplicar o Hidraliso passo a passo em casa para resultado de salão.",
+        "totalTime": "PT60M",
+        "supply": [
+            { "@type": "HowToSupply", "name": "Hidraliso Alisante de Chuveiro" },
+            { "@type": "HowToSupply", "name": "Shampoo antirresíduos" },
+            { "@type": "HowToSupply", "name": "Luvas" }
+        ],
+        "tool": [
+            { "@type": "HowToTool", "name": "Secador de cabelo" },
+            { "@type": "HowToTool", "name": "Chapinha" },
+            { "@type": "HowToTool", "name": "Pente fino" }
+        ],
+        "step": [
+            { "@type": "HowToStep", "name": "Limpeza Profunda", "text": "Lave o cabelo com shampoo antirresíduos duas vezes para remover resíduos." },
+            { "@type": "HowToStep", "name": "Retirar Excesso de Água", "text": "Retire o excesso com toalha. O cabelo deve ficar úmido, não encharcado." },
+            { "@type": "HowToStep", "name": "Aplicação Mecha por Mecha", "text": "Divida em 4 quadrantes e aplique mecha por mecha, mantendo 1,5cm de distância da raiz." },
+            { "@type": "HowToStep", "name": "Tempo de Pausa", "text": "Deixe agir por 15 a 30 minutos conforme o tipo de cabelo." },
+            { "@type": "HowToStep", "name": "Enxágue", "text": "Enxague apenas com água corrente, sem condicionador." },
+            { "@type": "HowToStep", "name": "Ativação Térmica", "text": "Seque com secador e pranche com chapinha a 180-200°C para selar o produto." }
+        ]
     } : null;
 
     return (
@@ -436,6 +474,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
                 {/* FAQ ESPECÍFICA PARA ARTIGO DE RANKING */}
                 {slug === "melhores-progressivas-de-chuveiro" && <FAQRanking />}
+
+                {/* FAQ ESPECÍFICA PARA COMPARATIVO */}
+                {slug === "hidraliso-vs-la-bella-liss" && <FAQComparativo />}
+
+                {/* FAQ ESPECÍFICA PARA TUTORIAL COMO USAR */}
+                {slug === "como-usar-hidraliso-passo-a-passo" && <FAQComoUsar />}
 
                 {/* CTA FINAL (Túnel de Conversão) */}
                 <div className="mt-10 pt-8 border-t border-gray-100">
