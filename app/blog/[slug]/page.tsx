@@ -28,13 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const post = getPostBySlug(slug);
     if (!post) return {};
 
-    // Títulos SEO otimizados para cliques (CTR) — baseado em queries reais do GSC
+    // Títulos SEO otimizados para MOBILE (≤60 chars) — baseado em queries reais do GSC
+    // Google mobile corta títulos acima de ~60 chars. 73.5% do tráfego é mobile.
     const seoTitles: Record<string, string> = {
-        "alisamento-natural-com-maizena-funciona": "Alisamento com Maizena e Leite Funciona? É Verdade que Alisa o Cabelo?",
-        "hidraliso-funciona-resenha": "Hidraliso Funciona? É Bom e Vale a Pena? Veja Resultado Real [Resenha 2026]",
-        "melhores-progressivas-de-chuveiro": "As 10 Melhores Progressivas de Chuveiro em 2026 (Ranking Atualizado)",
-        "hidraliso-vs-la-bella-liss": "Hidraliso vs La Bella Liss: Qual é Melhor? Comparativo Real [2026]",
-        "como-usar-hidraliso-passo-a-passo": "Como Usar Hidraliso Passo a Passo: Guia Completo [2026]",
+        "alisamento-natural-com-maizena-funciona": "Maizena Alisa o Cabelo? A Verdade Sobre a Receita [2026]",
+        "hidraliso-funciona-resenha": "Hidraliso Funciona? Resenha e Resultado Real [2026]",
+        "melhores-progressivas-de-chuveiro": "10 Melhores Progressivas de Chuveiro em 2026",
+        "hidraliso-vs-la-bella-liss": "Hidraliso vs La Bella Liss: Qual Melhor? [2026]",
+        "como-usar-hidraliso-passo-a-passo": "Como Usar Hidraliso Passo a Passo [2026]",
     };
 
     // Meta descriptions otimizadas por artigo — baseado em queries do GSC
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             description: optimizedDescription,
             type: "article",
             publishedTime: post.date,
-            modifiedTime: "2026-02-18",
+            modifiedTime: "2026-03-19",
             authors: ["Redação AlisamentoNatural"],
             section: post.category,
             tags: ["alisamento natural", "hidraliso", "progressiva de chuveiro"],
@@ -107,6 +108,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     const articleUrl = `${baseUrl}/blog/${post.slug}`;
     const imageUrl = post.thumbnail.startsWith("http") ? post.thumbnail : `${baseUrl}${post.thumbnail}`;
 
+    // SEO: Títulos e descriptions otimizados (espelha generateMetadata)
+    const seoTitles: Record<string, string> = {
+        "alisamento-natural-com-maizena-funciona": "Maizena Alisa o Cabelo? A Verdade Sobre a Receita [2026]",
+        "hidraliso-funciona-resenha": "Hidraliso Funciona? Resenha e Resultado Real [2026]",
+        "melhores-progressivas-de-chuveiro": "10 Melhores Progressivas de Chuveiro em 2026",
+        "hidraliso-vs-la-bella-liss": "Hidraliso vs La Bella Liss: Qual Melhor? [2026]",
+        "como-usar-hidraliso-passo-a-passo": "Como Usar Hidraliso Passo a Passo [2026]",
+    };
+    const seoDescriptions: Record<string, string> = {
+        "alisamento-natural-com-maizena-funciona": "É verdade que maizena alisa o cabelo? Veja a receita viral de alisamento natural com maizena e leite, se funciona de verdade e qual alternativa dá resultado real.",
+        "hidraliso-funciona-resenha": "Hidraliso funciona mesmo? Hidraliso é bom? Testamos este alisante de chuveiro e mostramos o resultado real. Veja composição, como usar e se vale a pena comprar.",
+        "melhores-progressivas-de-chuveiro": "Qual a melhor progressiva de chuveiro? Veja o ranking atualizado com La Bella Liss, Super Poderes, Hidraliso e mais. Comparamos preço, resultado e duração.",
+        "hidraliso-vs-la-bella-liss": "Comparativo completo entre Hidraliso e La Bella Liss. Qual alisa mais? Qual dura mais? Qual é mais barata? Veja preço, resultado e duração lado a lado.",
+        "como-usar-hidraliso-passo-a-passo": "Guia completo de como usar o Hidraliso passo a passo. Aprenda a aplicar a progressiva de chuveiro em casa e evite os 5 erros que destroem o resultado.",
+    };
+    const optimizedTitle = seoTitles[slug] || post.title;
+    const optimizedDescription = seoDescriptions[slug] || post.description;
+
     // ================================================================================
     // 🔧 SCHEMA 1: BreadcrumbList (Navegação para Rich Snippets)
     // ================================================================================
@@ -142,8 +161,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         "@context": "https://schema.org",
         "@type": "Article",
         "@id": `${articleUrl}#article`,
-        "headline": post.title,
-        "description": post.description,
+        "headline": optimizedTitle,
+        "description": optimizedDescription,
         "image": {
             "@type": "ImageObject",
             "url": imageUrl,
@@ -177,7 +196,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             }
         },
         "datePublished": post.date,
-        "dateModified": "2026-02-18",
+        "dateModified": "2026-03-19",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": articleUrl

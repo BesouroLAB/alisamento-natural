@@ -6,6 +6,10 @@ import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 // Objetivo: Capturar dúvidas de quem busca receitas caseiras e converter para tecnologia
 const faqData = [
     {
+        question: "A receita de maizena é definitiva? Alisa permanentemente?",
+        answer: "Não, a receita de maizena NÃO é definitiva. O efeito 'liso' que você vê dura apenas até a próxima lavagem. Para alisar o cabelo de forma definitiva e permanente, é necessário usar produtos com ativos de baixo peso molecular (como ácidos termoativados) que penetram na fibra capilar e realinham as pontes de enxofre. A maizena, por ser uma macromolécula, não consegue fazer isso."
+    },
+    {
         question: "A maizena realmente alisa o cabelo?",
         answer: "Não de forma definitiva. A maizena é um amido de milho que, quando aplicado no cabelo, forma uma película externa que dá a sensação de fios mais pesados e com menos volume. Porém, essa 'maquiagem' sai na primeira lavagem. Para alisar de verdade, é necessário agir no córtex do fio, o que a maizena não consegue fazer por ter uma molécula muito grande."
     },

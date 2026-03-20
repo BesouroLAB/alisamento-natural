@@ -46,8 +46,8 @@ const faqData = [
         answer: "Não é necessário e nem recomendado. O Hidraliso é um tratamento de longa duração (até 90 dias). O uso excessivo não vai alisar mais, pois o fio tem um limite de absorção. O ideal é respeitar o intervalo de crescimento da raiz, geralmente 30 dias."
     },
     {
-        question: "Hidraliso no Reclame Aqui: É confiável?",
-        answer: "Sim. Ao pesquisar o Hidraliso no Reclame Aqui, você verá que a grande maioria das reclamações é sobre atraso na entrega (correios) ou compra em sites não oficiais. A nota da empresa é excelente e eles resolvem 100% dos casos de quem compra pelo site oficial."
+        question: "Hidraliso no Reclame Aqui: É confiável? Posso confiar na marca?",
+        answer: "Sim, o Hidraliso é confiável. Ao pesquisar o Hidraliso no Reclame Aqui, a nota da empresa é considerada Ótima, com índice de resolução acima de 90%. A grande maioria das reclamações é sobre atraso na entrega (problema dos Correios, não do fabricante). Reclamações sobre 'resultado não atingido' vêm exclusivamente de pessoas que compraram em sites não oficiais (produto falso) ou não usaram a ativação térmica (secador/chapinha). Comprando pelo site oficial, o risco é zero — tem garantia de 30 dias."
     },
     {
         question: "Onde comprar o Hidraliso original?",
