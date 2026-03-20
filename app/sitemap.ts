@@ -62,14 +62,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     ];
 
-    // Artigos do Blog (Prioridade baseada na data - mais recentes = mais importantes)
+    // Artigos do Blog (Prioridade baseada na posição — pilares mais importantes)
+    // lastModified usa a data REAL de última edição, não a data de publicação
+    const lastEditDate = "2026-03-19T00:00:00.000Z"; // Atualizar sempre que editar os artigos
     const blogPosts = posts.map((post, index) => {
-        // Os 3 primeiros artigos (pilares) têm prioridade alta
         const isPillarPost = index < 3;
         return {
             url: `${baseUrl}/blog/${post.slug}`,
-            lastModified: new Date(post.date).toISOString(),
-            changeFrequency: "monthly" as const,
+            lastModified: lastEditDate,
+            changeFrequency: isPillarPost ? ("weekly" as const) : ("monthly" as const),
             priority: isPillarPost ? 0.85 : 0.7,
         };
     });
