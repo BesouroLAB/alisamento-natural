@@ -13,8 +13,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: [
                     "/api/",           // APIs internas
                     "/_next/",         // Assets do Next.js
-                    "/private/",       // Pasta privada (se existir)
-                    "/*.json$",        // Arquivos JSON (exceto schemas)
                 ],
             },
             {
@@ -49,6 +47,5 @@ export default function robots(): MetadataRoute.Robots {
             },
         ],
         sitemap: "https://alisamentonatural.com.br/sitemap.xml",
-        host: "https://alisamentonatural.com.br",
     };
 }
