@@ -212,97 +212,34 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     };
 
     // ================================================================================
-    // 🔧 SCHEMA 3: Product + Review (Para artigo de resenha - Rich Snippets com estrelas)
+    // 🔧 SCHEMA 3: Product + Review Editorial (Para artigo de resenha)
+    // NOTA: Removidos aggregateRating (reviews fabricadas) e merchant details
+    // (shipping/returnPolicy) para evitar penalização — somos blog, não loja.
     // ================================================================================
     const productSchema = slug === "hidraliso-funciona-resenha" ? {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Hidraliso Alisante de Chuveiro",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
-            "license": "https://alisamentonatural.com.br/termos",
-            "acquireLicensePage": "https://alisamentonatural.com.br/termos",
-            "creditText": "Hidraliso Oficial",
-            "creator": {
-                "@type": "Organization",
-                "name": "Hidraliso"
-            },
-            "copyrightNotice": "Alisamento Natural - Imagem do Produto"
-        },
+        "image": "https://res.cloudinary.com/do8gdtozt/image/upload/v1770516774/hidraliso-como-funciona_piosk7.jpg",
         "description": "Progressiva de chuveiro sem formol com tecnologia termoativada. Alisa cabelos ondulados, cacheados e crespos em casa.",
         "brand": {
             "@type": "Brand",
             "name": "Hidraliso"
         },
-        "sku": "HIDRALISO-001",
-        "offers": {
-            "@type": "Offer",
-            "url": "https://app.monetizze.com.br/r/AGF20985468/?u=JJ82891",
-            "priceCurrency": "BRL",
-            "price": "147.00",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": {
-                "@type": "Organization",
-                "name": "Hidraliso Oficial"
-            },
-            "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "BRL"
-                },
-                "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "BR"
-                },
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 3,
-                        "maxValue": 7,
-                        "unitCode": "DAY"
-                    }
-                }
-            },
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "BR",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 30,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "2480",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
         "review": {
             "@type": "Review",
             "reviewRating": {
                 "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
+                "ratingValue": "4",
+                "bestRating": "5",
+                "worstRating": "1"
             },
             "author": {
                 "@type": "Organization",
                 "name": "Redação AlisamentoNatural"
             },
-            "reviewBody": "O Hidraliso é uma excelente opção de progressiva de chuveiro. Livre de formol, com tecnologia termoativada e garantia de 30 dias. Recomendamos para quem busca praticidade e resultado profissional em casa."
+            "datePublished": "2026-02-08",
+            "reviewBody": "O Hidraliso é uma boa opção de progressiva de chuveiro sem formol. A tecnologia termoativada funciona bem em cabelos ondulados e cacheados. Pontos fortes: garantia de 30 dias e facilidade de uso em casa. Ponto fraco: preço acima da média das farmácias."
         }
     } : null;
 
