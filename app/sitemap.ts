@@ -1,79 +1,52 @@
-import { MetadataRoute } from "next";
-import { posts } from "@/lib/posts";
+import type { MetadataRoute } from 'next';
+import { getAllArticles, getSilos } from '@/lib/mdx';
+import { absoluteUrl, SILOS } from '@/lib/site';
 
-// ================================================================================
-// 🗺️ SITEMAP.XML OTIMIZADO COM PRIORIDADES ESTRATÉGICAS
-// ================================================================================
+/**
+ * Sitemap 100% programático: novas páginas entram automaticamente
+ * ao criar o arquivo .mdx (artigos) ou registrar o silo em SILOS.
+ * 
+ * lastModified vem do campo `updated` do frontmatter — não é mais
+ * uma data fixa hardcoded.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://alisamentonatural.com.br";
-    const currentDate = new Date().toISOString();
+  const articles = getAllArticles();
 
-    // Páginas Principais (Alta Prioridade)
-    const mainPages = [
-        {
-            url: baseUrl,
-            lastModified: currentDate,
-            changeFrequency: "daily" as const,
-            priority: 1.0, // Home é a MAIS importante
-        },
-        {
-            url: `${baseUrl}/blog`,
-            lastModified: currentDate,
-            changeFrequency: "daily" as const,
-            priority: 0.9, // Listagem do blog é muito importante
-        },
-    ];
+  // Rotas estáticas (alta prioridade)
+  const staticRoutes: MetadataRoute.Sitemap = [
+    {
+      url: absoluteUrl('/'),
+      lastModified: articles[0]?.lastModified ?? new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: absoluteUrl('/sobre'),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+  ];
 
-    // Páginas Secundárias (Média Prioridade)
-    const secondaryPages = [
-        {
-            url: `${baseUrl}/ofertas`,
-            lastModified: currentDate,
-            changeFrequency: "weekly" as const,
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/dicas`,
-            lastModified: currentDate,
-            changeFrequency: "weekly" as const,
-            priority: 0.7,
-        },
-    ];
-
-    // Páginas Institucionais (Baixa Prioridade, mas necessárias para E-E-A-T)
-    const institutionalPages = [
-        {
-            url: `${baseUrl}/sobre`,
-            lastModified: currentDate,
-            changeFrequency: "monthly" as const,
-            priority: 0.5,
-        },
-        {
-            url: `${baseUrl}/termos`,
-            lastModified: currentDate,
-            changeFrequency: "yearly" as const,
-            priority: 0.3,
-        },
-        {
-            url: `${baseUrl}/privacidade`,
-            lastModified: currentDate,
-            changeFrequency: "yearly" as const,
-            priority: 0.3,
-        },
-    ];
-
-    // Artigos do Blog (Prioridade baseada na posição — pilares mais importantes)
-    // lastModified usa a data REAL de última edição, não a data de publicação
-    const lastEditDate = "2026-03-19T00:00:00.000Z"; // Atualizar sempre que editar os artigos
-    const blogPosts = posts.map((post, index) => {
-        const isPillarPost = index < 3;
-        return {
-            url: `${baseUrl}/blog/${post.slug}`,
-            lastModified: lastEditDate,
-            changeFrequency: isPillarPost ? ("weekly" as const) : ("monthly" as const),
-            priority: isPillarPost ? 0.85 : 0.7,
-        };
+  // Hubs de silo (prioridade alta — são páginas de categoria)
+  const siloRoutes: MetadataRoute.Sitemap = getSilos()
+    .filter((silo) => silo in SILOS)
+    .map((silo) => {
+      const siloArticles = articles.filter((a) => a.silo === silo);
+      return {
+        url: absoluteUrl(`/${silo}`),
+        lastModified: siloArticles[0]?.lastModified ?? new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.9,
+      };
     });
 
-    return [...mainPages, ...secondaryPages, ...institutionalPages, ...blogPosts];
+  // Artigos individuais
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: absoluteUrl(`/${article.silo}/${article.slug}`),
+    lastModified: article.lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...siloRoutes, ...articleRoutes];
 }
