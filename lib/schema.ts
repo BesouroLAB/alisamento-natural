@@ -131,10 +131,20 @@ export function getArticleSchema(article: ArticleData) {
   const url = absoluteUrl(`/${article.silo}/${article.slug}`);
   const image = frontmatter.image ? absoluteUrl(frontmatter.image) : undefined;
 
-  const authorRef =
+  const authorObj =
     frontmatter.author === AUTOR_TIAGO.name
-      ? { '@id': AUTHOR_ID }
-      : { '@type': 'Organization', '@id': ORG_ID };
+      ? {
+          '@type': 'Person',
+          '@id': AUTHOR_ID,
+          name: AUTOR_TIAGO.name,
+          url: absoluteUrl('/sobre'),
+        }
+      : {
+          '@type': 'Organization',
+          '@id': ORG_ID,
+          name: SITE.name,
+          url: SITE.url,
+        };
 
   // Product + Review (resenhas com nota editorial)
   const product = frontmatter.product;
@@ -152,9 +162,10 @@ export function getArticleSchema(article: ArticleData) {
       ...(product.brand ? { brand: { '@type': 'Brand', name: product.brand } } : {}),
       review: {
         '@type': 'Review',
+        name: frontmatter.title,
         datePublished: new Date(frontmatter.date).toISOString(),
-        author: authorRef,
-        publisher: { '@id': ORG_ID },
+        author: authorObj,
+        publisher: { '@id': ORG_ID, name: SITE.name },
         ...(typeof product.rating === 'number'
           ? {
               reviewRating: {
@@ -231,8 +242,8 @@ export function getArticleSchema(article: ArticleData) {
     inLanguage: SITE.language,
     datePublished: new Date(frontmatter.date).toISOString(),
     dateModified: article.lastModified.toISOString(),
-    author: authorRef,
-    publisher: { '@id': ORG_ID },
+    author: authorObj,
+    publisher: { '@id': ORG_ID, name: SITE.name },
     ...(image ? { image } : {}),
   };
 }
