@@ -20,11 +20,13 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-wider">Navegação</h4>
                         <ul className="space-y-2 text-xs">
-                            <li><Link href="/" className="hover:text-orange-600 transition">Página Inicial</Link></li>
-                            <li><Link href="/blog" className="hover:text-orange-600 transition">Blog</Link></li>
-                            <li><Link href="/dicas" className="hover:text-orange-600 transition">Dicas de Especialista</Link></li>
-                            <li><Link href="/sobre" className="hover:text-orange-600 transition">Sobre Nós</Link></li>
-                            <li><Link href="/sitemap.xml" className="hover:text-orange-600 transition" prefetch={false}>Mapa do Site</Link></li>
+                            <li><Link href="/" className="hover:text-orange-600 transition">Início</Link></li>
+                            <li><Link href="/progressivas-de-chuveiro" className="hover:text-orange-600 transition">Reviews de Chuveiro</Link></li>
+                            <li><Link href="/comparativos" className="hover:text-orange-600 transition">Comparativos & Duelos</Link></li>
+                            <li><Link href="/alisamento-caseiro" className="hover:text-orange-600 transition">Mitos & Receitas Caseiras</Link></li>
+                            <li><Link href="/cuidados" className="hover:text-orange-600 transition">Segurança & Anvisa</Link></li>
+                            <li><Link href="/sobre" className="hover:text-orange-600 transition font-semibold text-indigo-600">Sobre o Autor (Tiago Fernandes)</Link></li>
+                            <li><Link href="/sitemap.xml" className="hover:text-orange-600 transition" prefetch={false}>Mapa do Site (XML)</Link></li>
                         </ul>
                     </div>
 
