@@ -1,17 +1,28 @@
 interface ProsConsProps {
-  pros: string[];
-  cons: string[];
-  /** Título opcional (default: "Prós e Contras") */
+  pros?: string[] | string;
+  cons?: string[] | string;
+  pontosFortes?: string[] | string;
+  pontosFracos?: string[] | string;
   title?: string;
 }
 
-/**
- * Componente visual de Prós e Contras para resenhas de produto.
- * Disponível no MDX como <ProsCons pros={[...]} cons={[...]} />.
- */
-export function ProsCons({ pros = [], cons = [], title = 'Prós e Contras' }: ProsConsProps) {
-  const safePros = Array.isArray(pros) ? pros : [];
-  const safeCons = Array.isArray(cons) ? cons : [];
+function parseArray(val: unknown): string[] {
+  if (Array.isArray(val)) return val.map(String);
+  if (typeof val === 'string') {
+    try {
+      const parsed = JSON.parse(val);
+      if (Array.isArray(parsed)) return parsed.map(String);
+    } catch {
+      return val.split(',').map((s) => s.trim()).filter(Boolean);
+    }
+  }
+  return [];
+}
+
+export function ProsCons(props: ProsConsProps) {
+  const { title = 'Prós e Contras' } = props;
+  const safePros = parseArray(props.pros ?? props.pontosFortes);
+  const safeCons = parseArray(props.cons ?? props.pontosFracos);
 
   return (
     <div className="my-8 rounded-xl border border-gray-200 overflow-hidden">
